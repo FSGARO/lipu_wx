@@ -1,0 +1,8 @@
+{
+  "component": true,
+    "usingComponents": {
+      "pickercol": "../pickercol/index",
+      "week": "../week/index"
+      
+    }
+}

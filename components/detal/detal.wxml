@@ -1,0 +1,6 @@
+<!--components/detal/detal.wxml-->
+<view class="del ">
+    <view class=" delbox" >
+    <i class="iconfont icon-10"></i>
+    </view>
+</view>

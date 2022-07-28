@@ -1,0 +1,396 @@
+<view class="addMedia">
+	<view class="topbox">
+		<headtop title="添加多媒体任务"></headtop>
+		<view class="tablist flex brb ">
+			<view class="tabli flex1 tc cfff" bindtap="tabChange" data-type="tab1">
+				<view class="audioIcon iconfont icon-youyinpin  {{tabtype=='tab1'?'activeA':''}}"></view>
+				<view class="basefs  {{tabtype=='tab1'?'baseAct1':''}}">音频</view>
+			</view>
+			<view class="tabli flex1 tc cfff" bindtap="tabChange" data-type="tab2">
+				<view class="audioIcon iconfont icon-bofang  {{tabtype=='tab2'?'activeA':''}}"></view>
+				<view class="basefs {{tabtype=='tab2'?'baseAct1':''}}">视频</view>
+			</view>
+			<view class="tabli flex1 tc cfff" bindtap="tabChange" data-type="tab3">
+				<view class="audioIcon iconfont icon-kongzhi  {{tabtype=='tab3'?'activeA':''}}"></view>
+				<view class="basefs {{tabtype=='tab3'?'baseAct1':''}} ">控制</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="addaudio">
+		<view class="priority flex flexjcsb">
+			<view class="name">
+				<view>名称</view>
+				<input type="text" placeholder="请输入名称" value="{{}}" bindinput="inputValue" class="inputName"></input>
+			</view>
+			<view class="selectPriority flex flexac">
+				<picker class="ibk wd100" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+					<view class="picker">
+						{{array[index]}}
+					</view>
+				</picker>
+			</view>
+		</view>
+
+		<view hidden="{{ tabtype =='tab1' || tabtype =='tab3' }}" >
+		<layout bind:toggleLayout="toggleLayout"></layout>
+	</view>
+		<!-- 音频源 -->
+		<view class="yingping"  hidden="{{tabtype =='tab3'}}">
+			<view class="resource-lable flex flexjcsb mtli">
+				<view class="flex">
+					<view class="icon ibk flex flexac">
+						<view class="iconfont icon-bofang baseAct"></view>
+					</view>
+					<view class="desc ibk flex flexdc  flexacsb  flextc">
+						<view>
+							<view class="basefs32"  wx:if="{{tabtype =='tab1'}}">音频源</view>
+							<view class="basefs32 "  wx:if="{{tabtype =='tab2'}}">视频源</view>
+							<view class="basefs30 c999 "  wx:if="{{tabtype =='tab2'}}">{{LayoutArray.length }}个源</view>
+							<view class="basefs30 c999 "  wx:if="{{tabtype =='tab1'}}">{{ currentVedio.length }}个源</view>
+							
+						</view>
+					</view>
+				</view>
+				<view class="flex flexdc flexac">
+					<view class="descBtn"  bindtap="YPdetail">详情</view>
+					<!-- 音视频详情 -->
+
+					<view class="siteDetail_box"  wx:if="{{isYPdetail}}">
+				<view class="icon-10 iconfont  site_icon"  bindtap="YPdetail"></view>
+				<view class="site_text">已选多媒体资源</view>
+				<view class="aready_media">
+					<view   wx:if="{{tabtype =='tab2'}}"  class="aready_media_item clearfix" wx:for="{{LayoutArray}}" wx:key="index">
+					<view  class="left aready_index">{{index+1}}.</view>
+					<view    class="left  aready_category">{{item.category_name}}:</view>
+					<view  class="left  aready_name">{{item.name}}</view>
+					<view hidden="{{!item.checked}}" class="right iconfont icon-yinliang2  user_media_icon"></view>
+								<view  hidden="{{item.checked}}" class="right iconfont icon-yinliang1  user_media_icon"></view>
+					</view>
+
+					<view   wx:if="{{tabtype =='tab1'}}"    class="aready_media_item clearfix" wx:for="{{currentVedio}}" wx:key="index">
+					<view  class="left aready_index">{{index+1}}.</view>
+					
+					<view  class="left  aready_name">{{item.name}}</view>
+					<view hidden="{{!item.checked}}" class="right iconfont icon-yinliang2  user_media_icon"></view>
+								<view  hidden="{{item.checked}}" class="right iconfont icon-yinliang1  user_media_icon"></view>
+					</view>
+				</view>
+				</view>
+
+
+
+
+					<view class="iconfont icon-changyongtubiao-mianxing- baseAct ibk" bindtap="chooseMedio"></view>
+					<!-- 音频弹出框 -->
+					<view class="Choose_box">
+						<view class="chooseMedio" hidden="{{ !isChoose }}">
+							<view class="chooseSource " wx:if="{{tabtype=='tab1'}}"> 选择音频源 </view>
+							<view class="chooseSource  " wx:if="{{tabtype=='tab2'}}"> 选择视频源 </view>
+							<view class="changVedio" hidden="{{tabtype=='tab1' || tabtype=='tab3' }}">
+								<view class="VedioFile">
+									<view class="File_title_box">
+										<!-- <view class="File_title">请选择视频源</view> -->
+										<picker mode="selector" bindchange="bindPickerInput" value="{{VedioArrayIndex}}"
+											range="{{VedioArray}}">
+											<view class="picker_icon-xiala1" >
+											<input class="File_title_inp" disabled="true" placeholder="请选择视频源" value="{{VedioArray[VedioArrayIndex]}}"></input>
+											<view class="iconfont icon-xiala1"></view>
+										</view>
+										</picker>
+
+										<!-- 请输入url视频源地址 -->
+										<view class="input_url" wx:if="{{ VedioArrayIndex === '0' }}">
+											<view class="input_box">
+												<input type="text" placeholder="请输入视频源地址" bindinput="vedioUrl"/>
+											</view>
+										</view>
+										<view  class="backflow"  wx:if="{{ VedioArrayIndex === '3' }}">
+											<radio-group   bindchange="changeBackflow">
+											<view  class="backflowItem ">
+												<radio   value="{{item.id}}"   wx:for="{{ backflowArray}}"  wx:key="index" checked="{{item.isChecked}}" >
+													<view >{{item.name}}</view>
+												</radio>
+											</view>
+										</radio-group>
+										</view>
+										<view class="IsVoice  clearfix">
+											<view class="left ">声音</view>
+											<view class="body-view  right">
+												<switch class="Voice_switch" color="#609afd" type="switch" 
+													bindchange="switch2Change" checked="{{ LayoutArray[onChoose-1].checked}}"/>
+											</view>
+										</view>
+									</view>
+								</view>
+
+
+								<!-- 用户选择的视频源列表 -->
+								<view class="user_media" >
+									<view class="yuanSite"> 源地址 </view>
+								<view class="clearfix user_media_item" wx:for="{{LayoutArray}}" wx:key="index">
+									<view class="left user_media_num">{{index+1}}.</view>
+								<view  class="user_media_text  left">{{ item.name }}</view>	
+								<view hidden="{{!item.checked}}" class="right iconfont icon-yinliang2  user_media_icon"></view>
+								<view  hidden="{{item.checked}}" class="right iconfont icon-yinliang1  user_media_icon"></view>
+								</view>
+								</view>
+								<chooseLayout selectLayout="{{ currentLayout}}"  onChoose="{{ onChoose}}"       bind:onChoose="onChoose"></chooseLayout>
+							</view>
+							<view hidden="{{tabtype=='tab1' || tabtype=='tab3' }}">
+							<view class="addSearch"   wx:if="{{ VedioArrayIndex == 1 || VedioArrayIndex == 2 }}" >
+								<search title="按名称搜索" class="searchSolt grow"></search>
+								<!-- 视频文件搜索 -->
+								<view class="search_file">
+									<view class="clearfix search_file_box ">
+										<view class="right search_file_time"  hidden="{{VedioArrayIndex == 2}}">时长</view>
+										<view class="left search_file_name">文件名称</view>
+									</view>
+									<view class="search_file_radio">
+										<!-- 选择视频源 -->
+										<scroll-view  scroll-y="true"  lower-threshold="50"  class="scroll_height" >
+										<radio-group   bindchange="changevedio">
+											<view wx:for="{{ VedioArrayIndex == 1?vedioList:rtmpList}}"  class="clearfix chooseItem" wx:key="index">
+												<radio checked="{{item.isChecked}}" class="chooseRadio" value="{{item.id}}">
+													<view class="right item_duration "   hidden="{{VedioArrayIndex == 2}}">{{item.duration}}</view>
+													<view class="right chooseName">{{item.name}}</view>
+												</radio>
+											</view>
+										</radio-group>
+									</scroll-view>
+									</view>
+								</view>
+							</view> 
+						</view>
+
+
+							<view class="addSearch"  hidden="{{tabtype=='tab2' || tabtype=='tab3' }}">
+								<search title="按名称搜索" class="searchSolt grow"></search>
+								<!-- 声音控制 -->
+								<view class="IsVoice  clearfix">
+											<view class="left ">声音</view>
+											<view class="body-view  right">
+												<switch class="Voice_switch" color="#609afd" type="switch" 
+													bindchange="Medio_sound" />
+											</view>
+										</view>
+								<!-- 视频文件搜索 -->
+								<view class="search_file">
+									<view class="clearfix search_file_box ">
+										<view class="right search_file_time">时长</view>
+										<view class="left search_file_name">文件名称</view>
+									</view>
+									<view class="search_file_radio">
+										<!-- 选择音频源 -->
+										<scroll-view  scroll-y="true"  lower-threshold="50" style=" height:900rpx; " >
+										<radio-group bindchange="changeMedio" >
+											<view class="chooseItem">
+												<radio wx:for="{{medioList}}" class="chooseRadio" value="{{item.id}}" wx:key="index">
+													<view class="right item_duration ">{{item.duration}}</view>
+													<view class="chooseName">{{item.name}}</view>
+												</radio>
+											</view>
+										</radio-group>
+									</scroll-view>
+									</view>
+								</view>
+							</view> 
+
+							<view  class="addSite"  wx:if="{{VedioArrayIndex === '3' && tabtype =='tab2' }}" >
+								<scroll-view   scroll-y="true"  class="tree_scroll_site">
+								<tree treeArr="{{treeArr}}" bind:treeTap="treeTap"  bind:treeTaps="treeTaps"></tree>
+							</scroll-view>
+							</view>
+							<view bindtap="chooseMedio" class="define"> 确定 </view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="resource-lable flex flexjcsb">
+			<view class="flex">
+				<view class="icon ibk flex flexac">
+					<view class="iconfont icon-weizhiquanxian baseAct"></view>
+				</view>
+				<view class="desc ibk flex flexdc  flexacsb flextc">
+					<view>
+						<view class="basefs32">位置</view>
+						<view class="basefs30 c999">{{ schollCount.length  }}个源</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex flexdc flexac">
+				<view class="descBtn"  bindtap="siteDetail">详情</view>
+				<!-- 位置详情 -->
+				<view class="siteDetail_box"  wx:if="{{isSiteDetail}}">
+				<view class="icon-10 iconfont  site_icon"  bindtap="siteDetail"></view>
+				<view class="site_text">已选位置</view>
+					<view  class="site_scholl clearfix">
+						<view wx:for="{{ schollCount}}"  wx:key="index" class="site_scholl_item  left">
+							<view class="site_scholl_text">{{ item.name }}</view>
+						</view>
+					</view>
+
+				</view>
+				<view class="iconfont icon-changyongtubiao-mianxing- baseAct"   bindtap="goSite"></view>
+				<!-- 选择地址 -->
+				<view class="Choose_box   "  >
+				
+					<view class="chooseMedio " wx:if="{{ SiteChoose }}">
+				
+						<view class="SiteTop">位置选择</view>
+						
+						<view class=" SiteBox">
+							<scroll-view class="scroll_site" scroll-y >
+						<trees treesArr="{{treesArr}}" bind:treeTapp="treeTapp"  bind:treeTapss="treeTapss"></trees>
+					</scroll-view>
+						<view bindtap="goSite" class="define"> 确定 </view>
+					</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view wx:if="{{tabtype =='tab3'}}">
+			<view class="lable-con label-time brb flex flexac mtli pl60">
+				同步控制
+			</view>
+			<view class="sync_Con">
+				<view class="sync_tabGroup clearfix ">
+					<view wx:for="{{syncControl1}}" wx:key="id">
+						<view class=" left tab {{ syncval==index?'syncAct':'' }}  {{item.checkbox ?'syncAct':'' }} basefs30"
+							bindtap="changeSync" data-index="{{index}}" data-items="{{item}}">{{item.comment}}</view>
+					</view>
+				</view>
+
+				<view class="sync_tabCon "   wx:if="{{sync_tabCon}}" >
+					<view class="flex flexjcsb pr40">
+						<view class="sync_tabCon_box">
+							<view class="checkbox clearfix sync_tabCon_lab ">
+								<checkbox-group bindchange="checkboxChangesync"  class="left sync_tabCon_check" >
+									<checkbox checked="{{ ctroItems.checkbox }}" value="{{ctroItems.id}}" />选择
+								</checkbox-group>
+
+								<view class="contral_delay  clearfix  right">
+									<input type="number" bindinput="delay_time" placeholder="延时时间" class="contral_delay_inp left"     disabled="{{ !ctroItems.checkbox }}"    value="{{ctroItems.attr}}"/>
+									<view  class="contral_delay_text left">秒</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="interface">
+						<radio-group class="radio-group flex flexwrap flexjcfs" bindchange="radioChange">
+							<label class="radio" wx:for="{{ctroItems.options}}" wx:key="index">
+								<radio disabled="{{!ctroItems.checkbox }}" checked="{{item.checkbox}}" value="{{item.attr}}" />
+								{{item.comment}}
+							</label>
+						</radio-group>
+					</view>
+					<!-- 指令附加条件 -->
+					<view  class="add_term">
+						<input type="text"   disabled="{{ !ctroItems.checkbox }}"   placeholder="指令附加条件" bindinput="add_term"  value="{{ctroItems.data}}"/>
+						
+					</view>
+				</view>
+
+			</view>
+		</view>
+
+		<view class="lable-con label-time brb flex flexac mtli ">
+			<view class="iconfont icon-shijian baseAct"></view>
+			<view class="basefs32">时间设置</view>
+		</view>
+
+
+
+		<view class="label-repeat cycle brb sync_Con">
+			<!-- <view class="rol1  basefs32  ">重复</view> --> 
+			<view class="flex ">
+				<radio-group class="radio-group  " name="a1" bindchange="radioValue">
+					<view class="radios" wx:for="{{repeat_mode}}" wx:key="index">
+						<radio class="radio  radio40" checked="{{item.setWeek}}" value="{{ item.mode }}">
+							<text class="basefs32">{{item.name}}</text>
+
+						</radio>
+					</view>
+				</radio-group>
+			</view>
+
+		</view>
+
+		<view class="timeBox  flex flexac selectWeek" hidden="{{timeMode == '-1' }}">
+			<view class="title rol1  basefs32 ">
+				执行时间
+			</view>
+			<picker mode="time" bindchange="audioVal"  disabled="{{timeMode == ''}}">
+				<view class="val clearfix">
+					<view wx:if="{{playtime==''}}" class="{{timeMode == ''?'':'picker_time'}}"></view>
+					<!-- <view class="weekVal left" wx:for="{{playtime}}">{{ item }} </view> -->
+					<view class="left">
+						<view class="weekVal left" wx:for="{{playtime}}" wx:key="index">
+							<view class="time_item"> {{ item }} </view>
+							<view class="iconfont icon-chuyidong1" catchtap="del_item" data-type="playtime" data-index="{{index}}">
+							</view>
+						</view>
+					</view>
+				</view>
+			</picker>
+			<!-- <view class="addBtn">
+				<view class=" iconfont icon-changyongtubiao-mianxing- baseAct "></view>
+			</view> -->
+		</view>
+
+		<view class="timeBox   flex flexac selectWeek" hidden="{{timeMode == '6' || timeMode == '-1' }}">
+			<view class="title rol1   basefs32">
+				执行周期
+			</view>
+
+			<!-- <view class="val flex flexac" bindtap="toggleWeek">
+        <input wx:if="{{weekVal==''}}" type="text" disabled placeholder="请选择" value="{{weekVal}}"></input>
+        <view wx:if="{{weekVal!==''}}">{{weekVal}}</view>
+      </view> -->
+
+			<view class="picker" wx:if="{{ timeMode == '0' || timeMode == '2'}}">
+				<picker class="pickerBox" mode='date' bindchange="pickerValue"  disabled="{{timeMode == ''}}">
+					<view class="val  clearfix">
+						<view wx:if="{{dayVal==''}}"   disabled="{{timeMode == ''}}"  class="{{timeMode == ''?'':'picker_time'}}">
+					</view>
+						<!-- <view class="weekVal left" wx:for="{{dayVal}}">{{ item }} </view> -->
+						<view class="left">
+							<view class="weekVal left" wx:for="{{dayVal}}" wx:key="index">
+								<view class="time_item"> {{ item }} </view>
+								<view class="iconfont icon-chuyidong1" catchtap="del_item" data-type="dayVal" data-index="{{index}}">
+								</view>
+							</view>
+						</view>
+					</view>
+				</picker>
+			</view>
+
+
+			<view class="   flex flexac " bindtap="toggleWeek" wx:if="{{ timeMode == '3'}}">
+				<view class="val  clearfix">
+					<view wx:if="{{weekVal==''}}"  class="{{timeMode == ''?'':'picker_time'}}" >
+					</view>
+					<view class="left">
+						<view class="weekVal left" wx:for="{{weekVal}}" wx:key="index">
+							<view class="time_item"> {{ item }} </view>
+							<view class="iconfont icon-chuyidong1" catchtap="del_item" data-type="weekVal" data-index="{{index}}">
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<!-- <view class="addBtn" hidden="{{timeMode == '3'}}">
+				<view class="  iconfont icon-changyongtubiao-mianxing- baseAct "></view>
+			</view> -->
+		</view>
+	</view>
+
+
+	<week wx:if="{{isweek}}" bind:onWeek="onWeek" weekArr="{{weekArr}}"></week>
+
+	<view class="pageAddbtn flexcenter baseAct " bindtap="onAddtask">添加</view>
+</view>

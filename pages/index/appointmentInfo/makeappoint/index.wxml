@@ -1,0 +1,59 @@
+<view class="make">
+  <headtop title="我要预约"></headtop>
+  <view class="main">
+    <view class="thead flex flexjcsb">
+      <view class="btn  flexcenter active tmbox">
+        <picker mode="date" value="{{date}}" bindchange="changemon">
+          <view class="picker">{{mon}}月</view>
+        </picker>
+      </view>
+      <view class="btn flexdc flexcenter {{act == 1?'active':''}} tmbox">
+        <view class="zhou">周一</view>
+        <view class="day">{{weed1}}</view>
+      </view>
+      <view class="btn flexdc flexcenter {{act == 2?'active':''}} tmbox">
+        <view class="zhou">周二</view>
+        <view class="day">{{weed2}}</view>
+      </view>
+      <view class="btn flexdc flexcenter {{act == 3?'active':''}} tmbox">
+        <view class="zhou">周三</view>
+        <view class="day">{{weed3}}</view>
+      </view>
+      <view class="btn flexdc flexcenter {{act == 4?'active':''}} tmbox">
+        <view class="zhou">周四</view>
+        <view class="day">{{weed4}}</view>
+      </view>
+      <view class="btn flexdc flexcenter {{act == 5?'active':''}} tmbox">
+        <view class="zhou">周五</view>
+        <view class="day">{{weed5}}</view>
+      </view>
+    </view>
+    <view class="flex flexjcsb">
+      <view class="flex flexdc wd15 con">
+        <view class="timeList flexcenter flexdc {{index%4==0?'mt60':''}}" wx:for="{{lessonTimeList}}" wx:key="*this">
+          <view class="sj">{{item.startTime}}</view>
+          <view class="sj">{{item.endTime}}</view>
+        </view>
+      </view>
+      <!-- <view class="flex flexdc wd15 con" wx:for="{{btArr}}" wx:key="*this">
+        <view class="tmbox flexcenter {{index==4?'mt60':''}} " wx:for="{{item}}" wx:key="*t">
+          <view class="ibk {{item.check?'':'guoqi'}} {{item.yysucces?'yue':''}}" data-timestart="{{item.time1+' '+item.time2}}" data-timeend="{{item.time1+' '+item.time3}}" data-time3="{{item.time3}}" bindtap="make">
+            {{item.text}}
+          </view> -->
+      <!-- {{item.check?'可预约':'已过期'}} -->
+      <!-- </view>
+      </view> -->
+      <view class="flex flexdc wd15 con" wx:for="{{todayLesson}}" wx:key="*this" wx:for-item="item1" wx:for-index="index1">
+        <view class="tmbox flexcenter {{index2%4==0?'mt60':''}} " wx:for="{{item1.weekLessons}}" wx:for-item="item2" wx:for-index="index2" wx:key="*this">
+          <view wx:if="{{item2.isValue}}" class="ibk {{item2.text=='已被预约'?'guoqi':''}}">
+            {{item2.text=='已被预约'?'已被预约':'有课'}}
+          </view>
+          <view wx:elif="{{item2.isOverdue}}" class="ibk guoqi">已过期</view>
+          <view wx:else class="ibk vacant" bindtap="myMake" data-index="{{index2}}" data-time="{{item2.date}}">
+            可预约
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

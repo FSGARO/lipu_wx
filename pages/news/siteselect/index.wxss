@@ -1,0 +1,44 @@
+/**index.wxss**/
+ .arrowIcon{
+   position: absolute;
+   right: 20rpx;
+ }
+
+ .siteli{
+   padding: 30rpx 30rpx 30rpx 0rpx;
+   background-color: var(--cfff);
+   margin: 0 0 0 20rpx;
+ }
+ .label-li{
+   background-color: #fff;
+ }
+.label-li .siteli:last-child{
+   border-bottom: none;
+}
+ .sonli{
+   padding-left: 30rpx;
+ }
+ .allcheck{
+   height: 130rpx;
+   background-color: var(--cfff);
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+ }
+ .allcheck image{
+   width: 80rpx;
+ }
+
+ .con .icon-jiantou3{
+   transform: rotate(90deg)
+ }
+
+ .active{
+     transform: rotate(-90deg) !important;
+ }
+
+ .label-li:last-child{
+   border-bottom: none;
+ }
+
+ 

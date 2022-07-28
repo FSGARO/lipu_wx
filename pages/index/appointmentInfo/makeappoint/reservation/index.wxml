@@ -1,0 +1,33 @@
+<view class="reserve">
+  <headtop title="预约信息"></headtop>
+  <form bindsubmit="formSubmit">
+    <view class="yuyueye hide{{showView?'show':''}}">
+      <view class="kaishi flex flexjcsb">
+        <span class="tip">开始时间</span>
+        <view class="times">{{reserveEntity.startTime}}</view>
+      </view>
+      <view class="kaishi flex flexjcsb">
+        <span class="tip">结束时间</span>
+        <view class="times">{{reserveEntity.endTime}}</view>
+      </view>
+      <view class="section">
+        <view class="tip">教室用途</view>
+        <view class="sectioncent">
+          <textarea name='purpose' value='{{form.purpose}}' bindblur="bindTextAreaBlur" placeholder="请输入申请理由" placeholder-style="height:300rpx;"></textarea>
+        </view>
+      </view>
+      <view class="section1">
+        <button class="fab" form-type="submit" type="primary">预约</button>
+      </view>
+    </view>
+  </form>
+  <view class="hide{{showView?'':'show'}}">
+    <view class="yychenggong">提交预约成功！请等待审核</view>
+    <view class="tup">
+      <image class='img1' src="../../../../../img/avatar.png"></image>
+    </view>
+    <view class="lookbtn">
+      <button type="primary" bindtap="chakan">查看预约</button>
+    </view>
+  </view>
+</view>

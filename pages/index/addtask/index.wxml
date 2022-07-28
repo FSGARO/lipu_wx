@@ -1,0 +1,6 @@
+
+<!-- <addcontrol  comeName="{{ comeName }}" comePlaces="{{ places}}"
+comeContralArray="{{contralArray}}" comeTimeMode="{{timeMode}}"
+comeDayys="{{dayys}}" comePlaytime="{{ playtime }}" ></addcontrol> -->
+
+<addcontrol  comeName="{{ comeName }}"  comePlaces="{{ comePlaces}}" comeContralArray="{{comeContralArray}}"   comeTimeMode="{{comeTimeMode}}"  comePlaytime="{{ playtime }}" comeDayys="{{dayss}}" Id="{{ Id }}"></addcontrol>

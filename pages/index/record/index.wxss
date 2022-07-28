@@ -1,0 +1,139 @@
+.list_box_item{
+  /* border-bottom: 1rpx solid #c0bdbd; */
+  margin: 20rpx 0rpx;
+  padding:10rpx;
+display: flex;
+justify-content: space-between;
+background: #ffffff;
+}
+.record_box{
+  padding: 0 20rpx;
+  width: 100vw;
+  /* height: 100vh; */
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+.record_time{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.cost_text , .cost_time{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 150rpx;
+}
+.xiangqing{
+text-align: center;
+}
+.xq_text{
+  width: 80rpx;
+  height: 50rpx;
+  border: 1rpx solid rgb(185, 183, 183);
+  margin-top: 25rpx;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+}
+.XQcontent {
+display: flex;
+justify-content: space-around;
+}
+.content_box_items .items , .XQcontent .items{
+  flex: 0.3;
+  overflow: hidden;
+  text-align: center;
+  height: 80rpx;
+  line-height: 40rpx;
+  word-break: break-all;
+  font-size: 28rpx;
+  border: 1rpx solid #ccc;
+  padding: 6rpx;
+}
+.XQcontent .items{
+  line-height: 80rpx;
+  background: rgb(228, 225, 225);
+}
+.content_box_items .itemss , .XQcontent .itemss {
+  flex: 0.1;
+  line-height: 40rpx;
+}
+
+.XQ{
+  margin-bottom: 60rpx;
+}
+
+.eject_box{
+  z-index: 99;
+  font-size: 36rpx;
+  position: fixed;
+  width: calc( 100vw - 60rpx );
+  height: 350rpx;
+  background: #b9c7e2;
+  left: 30rpx;
+  top: 30vh;
+  text-align: center;
+  padding: 50rpx 0rpx;
+  border-radius: 40rpx;
+}
+.eject_text{
+  line-height: 60rpx;
+}
+.btn{
+  width: 150rpx;
+  height: 60rpx;
+  background: #fff;
+  border:1rpx solid #ccc;
+  border-radius: 20rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #5c5a5a;
+  box-shadow: 4rpx 4rpx 5rpx #757474 ;
+
+}
+.isDelete{
+  width: 54vw;
+  margin:auto;
+  padding-top: 50rpx;
+}
+
+
+
+ .mode{
+  text-align: center;
+  line-height:60rpx;
+  margin:2rpx 14rpx;
+  padding: 0 6rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(#ce8c2a,#e4a13d);
+  border-bottom: 4rpx solid #b47517;
+  width: 200rpx;
+  color: #fff;
+}
+ .mode.active{
+  background:linear-gradient( #7aa6f1,#4785f0);
+  color: #fff;
+  font-size: 32rpx;
+  border-bottom: 4rpx solid #145ddb;
+}
+.allmode{
+  background: linear-gradient(#eb4444,#d87070);
+  border-bottom: 4rpx solid #c72222;
+}
+.delete{
+  width: 480rpx;
+  padding-top: 20rpx ;
+  height: 64rpx;
+}
+.totals{
+  padding-top: 20rpx ;
+  height: 64rpx;
+  width: 160rpx;
+  line-height: 64rpx;
+  padding-left: 10rpx;
+}
+.scroll_box{
+  /* border: 1rpx solid red; */
+  height: calc( 100vh - 280rpx);
+    overflow: hidden;
+}
+.record_top{
+  margin-bottom: 20rpx;
+}

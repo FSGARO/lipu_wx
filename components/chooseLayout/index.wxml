@@ -1,0 +1,139 @@
+<view class="layout ">
+  <view class="tabcon  clearfix">
+    <view class="clearfix">
+      <view class="text flexcenter right ">
+        <text wx-if="{{ selectLayout== 0 }}">布局一</text>
+        <text wx-if="{{ selectLayout== 1 }}">布局二</text>
+        <text wx-if="{{ selectLayout== 2 }}">布局三</text>
+        <text wx-if="{{ selectLayout== 3 }}">布局四</text>
+        <text wx-if="{{ selectLayout== 4 }}">布局五</text>
+        <text wx-if="{{ selectLayout== 5 }}">布局六</text>
+        <text wx-if="{{ selectLayout== 6 }}">布局七</text>
+        <text wx-if="{{ selectLayout== 7 }}">布局八</text>
+        <text wx-if="{{ selectLayout== 8 }}">布局九</text>
+
+      </view>
+    </view>
+
+    <view class="clearfix">
+      <view class="chart grow right">
+        <view class="layout-box flexcenter layout-box1   {{ onChoose == 1 ? 'onchoose' : ''}}" wx-if="{{ selectLayout==0}}"  bindtap="chooseFuc" data-onChoose='1'>
+          <view class="box-num flexcenter "  >1</view>
+        </view>
+        <view class="layout-box flexcenter layout-box2 flex" wx-if="{{ selectLayout==2}}">
+          <view class="flex1 flexcenter he100 brboxl   {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="flex1 flexcenter he100  {{ onChoose == 2 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='2'>
+            <view class="box-num flexcenter">2</view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box3 flexdc" wx-if="{{ selectLayout==1}}"> 
+          <view class="flex1 flexcenter  wd100 {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="flex1 flexcenter brboxt wd100  {{ onChoose == 2 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='2'>
+            <view class="box-num flexcenter">2</view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box4" wx-if="{{ selectLayout==3}}">
+          <view class="flex1 flexcenter he100 brboxl   {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="flex1 flexcenter he100 brboxl   {{ onChoose == 2 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='2'>
+            <view class="box-num flexcenter">2</view>
+          </view>
+          <view class="flex1 flexcenter  he100 {{ onChoose == 3 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='3'>
+            <view class="box-num flexcenter">3</view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box5 flexdc" wx-if="{{ selectLayout==4}}">
+          <view class="flex1 flexcenter wd100   {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="flex1 flexcenter brboxt wd100   {{ onChoose == 2 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='2'>
+            <view class="box-num flexcenter">2</view>
+          </view>
+          <view class="flex1 flexcenter brboxt wd100   {{ onChoose == 3 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='3'>
+            <view class="box-num flexcenter">3</view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box6" wx-if="{{ selectLayout==5}}">
+          <view class="flex1 flexcenter he100 brboxl   {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="flex1 flex flexdc he100">
+            <view class="flex1 flexcenter   {{ onChoose == 2 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='2'>
+              <view class="box-num flexcenter">2</view>
+            </view>
+            <view class="flex1 flexcenter brboxt  {{ onChoose == 3 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='3'>
+              <view class="box-num flexcenter">3</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box7" wx-if="{{ selectLayout==6}}">
+          <view class="flex1 flexcenter he100 brboxl flexdc flex2_3">
+            <view class=" gao1 wd100 flexcenter   {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class=" gao3 wd100 flexcenter brboxt  {{ onChoose == 3 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='3'>
+              <view class="box-num flexcenter">3</view>
+            </view>
+          </view>
+          <view class="flex1 flex flexcente he100 flexdc  "  >
+            <view class="gao1 wd100 flexcenter {{ onChoose == 2 ? 'onchoose' : ''}}" bindtap="chooseFuc" data-onChoose='2'>
+              <view class="box-num flexcenter">2</view>
+            </view>
+            <view class=" gao3 wd100 flexcenter brboxt  {{ onChoose == 4 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='4'>
+              <view class="box-num flexcenter">4</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box8" wx-if="{{ selectLayout==7}}">
+          <view class="flex1 flexcenter he100 brboxl flexdc">
+            <view class="flex1 wd100 flexcenter   {{ onChoose == 1 ? 'onchoose' : ''}}" data-onChoose='1'       bindtap="chooseFuc">
+              <view class="box-num flexcenter  "  >1</view>
+            </view>
+            <view class="flex1 wd100 flexcenter brboxt   {{ onChoose == 3 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='3'>
+              <view class="box-num flexcenter  " >3</view>
+            </view>
+          </view>
+          <view class="flex1 flex flexcente he100 flexdc ">
+            <view class="flex1 wd100 flexcenter   {{ onChoose == 2 ? 'onchoose' : ''}} "   bindtap="chooseFuc"  data-onChoose='2'>
+              <view class="box-num flexcenter " >2</view>
+            </view>
+            <view class="flex1 wd100 flexcenter brboxt   {{ onChoose == 4 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='4'>
+              <view class="box-num flexcenter  " >4</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="layout-box flexcenter layout-box9" wx-if="{{ selectLayout==8}}">
+          <view class="flex2_3 flexcenter he100 brboxl    {{ onChoose == 1 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='1'>
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="flex1 flexcenter he100 flexdc">
+            <view class="flex1 flexcenter wd100    {{ onChoose == 2 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='2'>
+              <view class="box-num flexcenter">2</view>
+            </view>
+            <view class="flex1 flexcenter brboxt wd100    {{ onChoose == 3 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='3'>
+              <view class="box-num flexcenter">3</view>
+            </view>
+            <view class="flex1 flexcenter brboxt wd100    {{ onChoose == 4 ? 'onchoose' : ''}}"  bindtap="chooseFuc" data-onChoose='4'>
+              <view class="box-num flexcenter">4</view>
+            </view>
+
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+</view>

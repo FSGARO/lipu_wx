@@ -1,0 +1,53 @@
+<!-- index.wxml -->
+<view class="my">
+  <view class="top">
+    <view class="userInfo flex flexac">
+      <view wx:if="{{userInfo.language}}" class="warpper">
+        <view class="avatar ibk">
+          <image class="img" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="username">{{userInfo.nickName}}</view>
+      </view>
+      <button wx:else plain bindtap="onChooseAvatar" class="infoBtn">获取头像和昵称</button>
+    </view>
+  </view>
+  <view class="con listCon pageMenuCon">
+    <!-- <navigator url='./changepwd/index' hover-class="navigator-hover">
+    <view class="li modify flex brb flexcenter">
+      <view class="icon flexcenter iconbox">
+        <view class="iconfont icon-xiugaimima"></view>
+      </view>
+      <view class="grow lableText flex flexac">修改密码</view>
+        <view class=" iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- "></view>
+    </view>
+    </navigator> -->
+    <navigator url='./chooseschool/index' hover-class="navigator-hover">
+      <view class="li school flex brb flexcenter">
+        <view class="icon flexcenter iconbox">
+          <view class="iconfont icon-xuexiao1"></view>
+        </view>
+        <view class="grow lableText flex flexac">选择学校</view>
+        <view class=" iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- "></view>
+      </view>
+    </navigator>
+    <navigator url='./aboutme/index' hover-class="navigator-hover">
+      <view class="li about flex brb flexcenter">
+        <view class="icon flexcenter iconbox">
+          <view class="iconfont icon-guanyuwomen"></view>
+        </view>
+        <view class="grow lableText flex flexac">关于我们</view>
+        <view class=" iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- "></view>
+      </view>
+    </navigator>
+    <view class="li qrcode flex brb flexcenter">
+      <view class="icon flexcenter iconbox">
+        <view class="iconfont icon-ico"></view>
+      </view>
+      <view class="grow lableText flex flexac">小程序码</view>
+      <view class=" iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- "></view>
+    </view>
+    <!-- <view class="signout tc brb">退出</view> -->
+  </view>
+</view>
+<!-- tree组件的调试 -->
+<view></view>

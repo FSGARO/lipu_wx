@@ -1,0 +1,8 @@
+<!--pages/index/addMedia/index.wxml-->
+<view class="taskmanage flex flexdc">
+  <!-- <view class="topbox">
+    <headtop title="添加多媒体任务"></headtop>
+  </view> -->
+
+   <addMedia bind:onAddtask="onAddtask"></addMedia>
+   </view>

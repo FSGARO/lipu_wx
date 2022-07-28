@@ -1,0 +1,62 @@
+/**index.wxss**/
+
+.news{
+  height: 100vh;
+}
+
+.tabtop{
+  padding: 38rpx 0;
+  background-color: var(--cfff);
+  color: var(--c999);
+}
+.pulldown{
+  transform: rotate(90deg);
+}
+ 
+
+.icon{
+  width: 50rpx;
+  vertical-align: middle;
+}
+ 
+
+.publish{
+  width: 200rpx;
+  border-left: 2rpx solid #ccc;
+  color: var(--pulish);
+}
+.con{
+padding: 20rpx 40rpx;
+  background-color: var(--cfff);
+}
+.msg-Info{
+  padding-bottom: 10rpx;
+}
+.msg-item{
+  margin-top: 40rpx;
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 10rpx;
+}
+
+.nulldata image{
+  width: 120rpx;
+}
+
+.nulldata{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 230rpx;
+  transform: translateY(-100rpx);
+}
+
+.nulldata .tip{
+  margin-top: 50rpx;
+}
+.tab{
+  font-size: 30rpx;
+}
+ 

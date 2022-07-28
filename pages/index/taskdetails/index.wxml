@@ -1,0 +1,249 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+	<headtop title="{{taskDetail.name}}"></headtop>
+
+	<view class="content">
+		<view class="">
+			<!-- <view class="title">控制源 </view>
+			<view class="title-con">
+				<view class="target tc setBox flexcenter flexdc {{ projector?'projector':'' }}" bindtap="projectorChange">
+					<view class="iconfont icon-touyingyi1"></view>
+					<text>投影仪</text>
+				</view>
+			</view> -->
+			<view class="canvas" wx:if="{{ classfly == 1}}">
+				<view class="title">画布布局</view>
+				<view class="title-con">
+					<view class="layout ">
+						<view class="tabcon flexspace ">
+							<view class="text flexcenter">
+								<text>布局{{layout}}</text>
+							</view>
+							<view class="chart">
+								<view class="layout-box flexcenter layout-box1" wx-if="{{layout=='一'}}">
+									<view class="box-num flexcenter">1</view>
+								</view>
+								<view class="layout-box flexcenter layout-box2 flex" wx-if="{{layout=='二'}}">
+									<view class="flex1 flexcenter he100 brboxl">
+										<view class="box-num flexcenter">1</view>
+									</view>
+									<view class="flex1 flexcenter">
+										<view class="box-num flexcenter">2</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box3 flexdc" wx-if="{{layout=='三'}}">
+									<view class="flex1 flexcenter">
+										<view class="box-num flexcenter">1</view>
+									</view>
+									<view class="flex1 flexcenter brboxt wd100">
+										<view class="box-num flexcenter">2</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box4" wx-if="{{layout=='四'}}">
+									<view class="flex1 flexcenter he100 brboxl">
+										<view class="box-num flexcenter">1</view>
+									</view>
+									<view class="flex1 flexcenter he100 brboxl">
+										<view class="box-num flexcenter">2</view>
+									</view>
+									<view class="flex1 flexcenter">
+										<view class="box-num flexcenter">3</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box5 flexdc" wx-if="{{layout=='五'}}">
+									<view class="flex1 flexcenter">
+										<view class="box-num flexcenter">1</view>
+									</view>
+									<view class="flex1 flexcenter brboxt wd100">
+										<view class="box-num flexcenter">2</view>
+									</view>
+									<view class="flex1 flexcenter brboxt wd100">
+										<view class="box-num flexcenter">2</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box6" wx-if="{{layout=='六'}}">
+									<view class="flex1 flexcenter he100 brboxl">
+										<view class="box-num flexcenter">1</view>
+									</view>
+									<view class="flex1 flex flexdc he100">
+										<view class="flex1 flexcenter ">
+											<view class="box-num flexcenter">2</view>
+										</view>
+										<view class="flex1 flexcenter brboxt">
+											<view class="box-num flexcenter">3</view>
+										</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box7" wx-if="{{layout=='七'}}">
+									<view class="flex1 flexcenter he100 brboxl flexdc">
+										<view class="flex1_5 wd100 flexcenter ">
+											<view class="box-num flexcenter">1</view>
+										</view>
+										<view class="flex1 wd100 flexcenter brboxt">
+											<view class="box-num flexcenter">3</view>
+										</view>
+									</view>
+									<view class="flex1 flex flexcente he100 flexdc">
+										<view class="flex1_5 wd100 flexcenter ">
+											<view class="box-num flexcenter">2</view>
+										</view>
+										<view class="flex1 wd100 flexcenter brboxt">
+											<view class="box-num flexcenter">4</view>
+										</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box8" wx-if="{{layout=='八'}}">
+									<view class="flex1 flexcenter he100 brboxl flexdc">
+										<view class="flex1 wd100 flexcenter ">
+											<view class="box-num flexcenter">1</view>
+										</view>
+										<view class="flex1 wd100 flexcenter brboxt">
+											<view class="box-num flexcenter">3</view>
+										</view>
+									</view>
+									<view class="flex1 flex flexcente he100 flexdc">
+										<view class="flex1 wd100 flexcenter ">
+											<view class="box-num flexcenter">2</view>
+										</view>
+										<view class="flex1 wd100 flexcenter brboxt">
+											<view class="box-num flexcenter">4</view>
+										</view>
+									</view>
+								</view>
+
+								<view class="layout-box flexcenter layout-box9" wx-if="{{ selectLayout=='layout9'}}">
+									<view class="flex2_3 flexcenter he100 brboxl">
+										<view class="box-num flexcenter">1</view>
+									</view>
+									<view class="flex1 flexcenter he100 flexdc">
+										<view class="flex1 flexcenter wd100">
+											<view class="box-num flexcenter">2</view>
+										</view>
+										<view class="flex1 flexcenter brboxt wd100">
+											<view class="box-num flexcenter">3</view>
+										</view>
+										<view class="flex1 flexcenter brboxt wd100">
+											<view class="box-num flexcenter">4</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<!-- 画布布局结束 -->
+				</view>
+			</view>
+		</view>
+
+		<view class="title " wx:if="{{ classfly == 1}}">直播源</view>
+		<view class=" onPlay clearfix" wx:if="{{ classfly == 1}}">
+			<view class="title-con left">
+				<view wx:for="{{newArray}}" wx:key="index" class="url_box">
+					<view class="url_item">{{item.id+1}}.{{item.url}}</view>
+					<view class="enabled"></view>
+				</view>
+			</view>
+			<view class="title-con right ">
+				<view wx:for="{{source}}" wx:key="index">
+					<view class="source_item">{{item}}</view>
+				</view>
+			</view>
+		</view>
+		<!-- 执行按键 -->
+		<view wx:if="{{contarl.length != 0}}">
+			<view class="title" >同步控制</view>
+			<view class="title-con">
+				<view class="ctral_box" class="clearfix">
+					<view wx:for="{{ contarl}}" wx:key="index" class=" ctral_item left">
+						<view class="ctral_name">{{item.name}}</view>
+						<view class="ctral_comment">（{{item.options.comment}}）</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 执行按键 -->
+			<!-- 执行记录 -->
+			<!-- <view class="title" hover-class="activeBtn"  bindtap="go_record">
+		<view class="record_box  clearfix">
+			<view class="record_title left">执行记录</view>
+			<view class="record_icon right">
+				<view class="iconfont icon-xiangqing"></view>
+			</view>
+		</view>
+	</view> -->
+		<view class="title">执行时间</view>
+		<view class="title-con" >
+			<view class="bofang clearfix">
+		
+				<view class="bofang-title left">{{ taskDetail.mode}}</view>
+				<view class="left">{{ taskDetail.prop}}</view>
+			</view>
+			<view class="bofang clearfix">
+				<view class="bofang-title left">上次执行:</view>
+				<view class="left">{{ taskDetail.prev}}</view>
+			</view>
+			<view class="bofang clearfix">
+				<view class="bofang-title left">下次执行:</view>
+				<view class="left">{{ taskDetail.next}}</view>
+			</view>
+			<view class="bofang clearfix">
+				<view class="bofang-title left" wx:if="{{ classfly == 1}}">播放时间:</view>
+				<view class="bofang-title left" wx:if="{{ classfly == 0}}">执行时间:</view>
+				<view class="left bofang-list">
+					<view class="left" wx:for="{{ taskDetail.clock}}" wx:key="index">
+						<view class=" bofang-con">{{item}}</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+
+		<view class="title">运行状态</view>
+		<view class="title-con">
+			<!-- <view class="tab-lable ibk">{{taskDetail.able }}</view> -->
+			<view class="tab-lable ibk green" wx-if="{{ taskDetail.running}}">运行中</view>
+			<view class="tab-lable ibk" wx-if="{{ !taskDetail.running}}">未运行</view>
+		</view>
+
+
+		<view class="title">执行区域</view>
+		<view class="title-con-place">
+			<view wx:for="{{executePlace}}" wx:key='index'>
+				<view class="tab-lable ibk">{{item}}</view>
+			</view>
+		</view>
+	
+
+
+	</view>
+
+	<!-- </view> -->
+
+	<view class="flex foot">
+		<view class="label flex1 flexcenter  detail_icon  {{stop_enabled?'undetail_icon':'' }}  "  bindtap="stopModify"  hover-class="activeBtn" >
+			<!-- <view class="iconfont icon-winfo-icon-bofang" ></view> -->
+			<view class="iconfont icon-zantingtingzhi"></view>
+			停止运行
+		</view>
+		<!-- <view class="label flex1 flexcenter detail_icon" hidden="{{ !isActive}}" bindtap="runModify"  hover-class="activeBtn">
+			<view class="iconfont icon-winfo-icon-bofang"></view>
+			启用任务
+		</view> -->
+	
+		<view class="label flex1 flexcenter detail_icon   {{run_enabled?'undetail_icon':'' }}"  bindtap="runModify" hover-class="activeBtn">
+			<view class="iconfont icon-shoudong"></view>
+			立即执行
+		</view>
+
+		<view class="label flex1 flexcenter detail_icon" bindtap="go_record"  hover-class="activeBtn">
+			<view class="iconfont icon-renwuzhongxin"></view>
+			执行记录
+		</view>
+	</view>
+</view>

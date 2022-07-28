@@ -1,0 +1,83 @@
+/**index.wxss**/
+
+.topHead {
+  color: #fff;
+}
+
+.soundrecording image {
+  width: 130rpx;
+}
+
+.broadcast {
+  padding:130rpx 0 75rpx 0;
+
+}
+
+.broadcast .text {
+  color: var(--cfff);
+}
+
+.topbg {
+  /* background:linear-gradient(#9590ff, #6077ff); */
+  background:linear-gradient(#609afd, #acc7f5);
+  height: 370rpx;
+}
+
+.info {
+  padding: 5rpx 0rpx 15rpx 35rpx;
+  text-align: left;
+}
+
+.msg-text {
+  width: 530rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-indent: -2rpx;
+  padding-top: 4rpx;
+}
+
+page{
+  background-color: var(--cfff);
+}
+
+.date {
+  font-size: 30rpx;
+}
+
+.iconxiaonei {
+  background-color: #5269fc;
+}
+
+.iconxitong {
+  background-color: #2cc88e;
+}
+
+.iconfuwu {
+  background-color: #f5794b;
+}
+.news .arrowLeft{
+  display: none;
+}
+.news .innerhead{
+  display: flex;
+  justify-content: left;
+}
+.basefs{
+  color: rgb(28, 26, 26);
+}
+.unread-count{
+
+  background-color: rgb(231, 10, 10);
+  position: absolute;
+  top:-20rpx;
+  left:-74rpx;
+  border-radius: 36%;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  padding: 0 10rpx;
+}
+.info-msg{
+position: relative;
+}

@@ -1,0 +1,125 @@
+/**index.wxss**/
+
+.broadcast {
+  height: 100vh;
+}
+
+.topHead {
+  color: #fff;
+}
+
+.soundrecording image {
+  width: 130rpx;
+}
+
+.topbg {
+  background-color: var(--bglabel);
+}
+
+.con .li {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.con .li .icon {
+  width: 130rpx;
+  height: 120rpx;
+  background-color: blue;
+  border-radius: 20rpx;
+}
+
+.con .li .icon image {
+  width: 60%;
+}
+
+.info {
+  padding-left: 20rpx;
+  padding-bottom: 15rpx;
+}
+
+.msg-text {
+  font-size: 30rpx;
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info .info-title {
+  font-size: 30rpx;
+}
+
+.date {
+  font-size: 30rpx;
+}
+
+.arrowRight {
+  width: 50rpx;
+}
+
+.lable {
+  padding: 20rpx 30rpx;
+}
+
+.detailsBtn {
+  padding: 8rpx 20rpx;
+  border: 2rpx solid #888;
+  color: #888;
+  font-size: 30rpx;
+  border-radius: 8rpx;
+}
+
+.siteopt {
+  background-color: var(--cfff);
+}
+
+
+.startPlay {
+  background-color: var(--cfff);
+}
+
+.playBtn {
+  width: 86%;
+  height: 86%;
+  border-radius: 50%;
+  background: linear-gradient(to right, #9ad9a6, #a8e7e9);
+}
+
+.playBtn image {
+  width: 100%;
+}
+
+.addScale {
+  animation: myScale 0.1s;
+}
+
+
+@keyframes myScale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.97, 0.97);
+  }
+}
+
+
+.playBtnActive{
+  transform: scale(0.96,0.96);
+}
+
+.playwrap {
+  width: 379rpx;
+  height: 379rpx;
+  border-color: #a7e6e2;
+  border-width: 2rpx;
+  border-style: solid;
+  border-radius: 50%;
+  margin-top: 150rpx;
+  font-size: 55rpx;
+}
+
+

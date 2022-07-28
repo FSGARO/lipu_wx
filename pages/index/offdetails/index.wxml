@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+  <view class="topBox">
+    <headtop title="开关详情"></headtop>
+  </view>
+  <view class="tab flex">
+    <view class="flex1 flexcenter prelative {{tabcheck=='tab1'?'active':''}}" bindtap="checkTab" data-id="1">
+      灯光
+      <view class="tabbtb" wx-if="{{tabcheck=='tab1'}}"></view>
+    </view>
+    <view class="flex1 flexcenter prelative {{tabcheck=='tab2'?'active':''}}" bindtap="checkTab" data-id="2">
+      投影机
+      <view class="tabbtb" wx-if="{{tabcheck=='tab2'}}"></view>
+    </view>
+  </view>
+  <view class="con">
+    <view class="tab1-con" wx-if="{{tabcheck=='tab1'}}">
+      <view class="li flex flexjcsb">
+        <view>灯</view>
+        <switch bindchange="switchChange" data-type="light" checked="{{offgroup[0].check}}" />
+      </view>
+    </view>
+    <view class="tab2-con" wx-if="{{tabcheck=='tab2'}}">
+      <view class="li">
+        <view class="flex flexjcsb offli">
+          <view>摄影机</view>
+          <switch bindchange="switchChange" data-type="camera" checked="{{offgroup[1].check}}" />
+        </view>
+        <radio-group class="radio-group flex flexwrap flexjcfs" bindchange="cameraChange">
+          <label class="radio" wx:for="{{offgroup[1].arr}}" wx:for-index="index">
+            <radio disabled="{{!offgroup[1].check}}"   value="{{index}}"  checked="{{item.checked}}" />{{item.name}}
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+  </view>
+</view>

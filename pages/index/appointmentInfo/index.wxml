@@ -1,0 +1,30 @@
+<!-- index.wxml -->
+<view class="taskmanage flex flexdc">
+  <headtop title="预约信息"></headtop>
+  <view class="bgDatanull"></view>
+  <view class="tabCard flex flexjcsb flexac">
+    <view class="">
+      <view>{{classroomaddress }}</view>
+    </view>
+    <view class="yuyueBtn ibk" bindtap="myMake">我要预约</view>
+  </view>
+  <picker class="wd100 picker" mode="date" value="{{date}}" start="2015-09-01" end="2117-09-01" bindchange="bindDateChange">
+    <view class="selectDate flex flexjcsb flexac" bindtap="selectDate">
+      <view class=" ">{{date}} 星期 {{week}}</view>
+      <view class="iconfont icon-riqi  "></view>
+    </view>
+  </picker>
+  <view style="margin-top:20px">
+    <view class="lessonList" wx:for="{{lessonTimeList}}" wx:key="id">
+      <view class="lessonTimeInfo">
+        <view class="lessonTitle">{{item.projectName}}</view>
+        <view class="lessonTime">{{item.startTime}}-{{item.endTime}}</view>
+      </view>
+      <view wx:if="{{todayLesson[index].isValue}}" class="lessonInfo {{todayLesson[index].text=='已被预约'?'overdue':''}}">
+        {{todayLesson[index].text}}
+      </view>
+      <view wx:elif="{{todayLesson[index].isOverdue}}" class="lessonInfo overdue">已过期</view>
+      <view wx:else class="lessonInfo vacant" bindtap="addMake" data-index="{{index}}">空</view>
+    </view>
+  </view>
+</view>

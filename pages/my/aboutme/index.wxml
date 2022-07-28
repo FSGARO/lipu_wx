@@ -1,0 +1,15 @@
+<headtop title="关于我们"></headtop>
+<view class="about">
+  <view class="logo flex flexac"> 
+    <image mode="widthFix" class="verify" src="../../../img/logo.png"></image>
+  </view>
+  <view class="content">
+    <view class="c-title">力扑智慧</view>
+    <view class="basefs version">版本|V1.1.1.7.1</view>
+  </view>
+  <view class="wei">
+    <view class="basefs">微信公众号：力扑智慧教室</view>
+    <view class="basefs">网址：http://www.litpsmart.com/</view>
+
+  </view>
+</view>

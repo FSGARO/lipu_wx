@@ -1,0 +1,42 @@
+<!--index.wxml-->
+
+<view class="news flex flexdc">
+ <headtop title="消息中心"></headtop>
+  <!-- <view class="">
+    <headtop title="消息中心"></headtop>
+    <view class="tabtop flex">
+      <view class="grow flex">
+        <view class="flex1 tc tab flexcenter">
+          <picker class="ibk" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker basefs">
+              {{array[index]}}
+            </view>
+          </picker>
+          <view class="pulldown iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></view>
+
+        </view>
+        <view class="empty flex1 tc tab flexcenter" bindtap="goEmpty">
+          <view class="iconfont icon-shanchu"></view>
+          <view class="basefs">清空消息</view>
+        </view>
+      </view>
+      <view class="publish tc tab flexcenter" bindtap="goPulish">
+        <view class="iconfont icon-fabu1"></view>
+        <view class="basefs">发布</view>
+      </view>
+    </view>
+  </view> -->
+  <view class="con grow prelative">
+    <view class="nulldata tc" wx:if="{{ msgInfo == null }}">
+      <image mode="widthFix" src="../../../img/nulldata.png"></image>
+      <view class="tip">暂无数据</view>
+    </view>
+    <!-- 消息列表 -->
+    <view class="msgList" wx:for="{{msgInfo}}" wx:key="id">
+      <view class="msg-item clearfix">
+      <view class="msg-Info left">{{ item.msg}}</view>
+      <view class="msg-Time right">{{item.timestamp}}</view>
+      </view>
+    </view>
+  </view>
+</view>

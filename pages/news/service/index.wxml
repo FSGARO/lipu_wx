@@ -1,0 +1,18 @@
+<view class="service">
+  <headtop title="服务消息"></headtop>
+  <view class="empty">
+    <view class="flex" bindtap="emptyMsg">
+      <view class="iconfont icon-shanchu"></view>
+      <view class="basefs">清空消息</view>
+    </view>
+  </view>
+  <view class="contentli">
+    <view class="title flex flexac">
+      <view class="tt f36">欢迎使用校园融合欢迎使用校园融合欢迎使用校园融合</view>
+      <view class="ttime f30">2020-08-13 11:43:29</view>
+    </view>
+    <view class="contents f28">
+      尊敬的用户：感谢您对此校园融合系统的支持！我们会竭诚为您提供更优质的产品和服务.
+    </view>
+  </view>
+</view>

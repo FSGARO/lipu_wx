@@ -1,0 +1,18 @@
+<!-- index.wxml -->
+<view class="appointment flex flexdc">
+  <headtop title="预约教室列表"></headtop>
+  <!-- <view class="con listCon"> -->
+  <scroll-view class="con listCon" scroll-y bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+    <view class="li flex brb flexcenter" bindtap="goAppointmentInfo" wx:for="{{classList}}" wx:key="id" data-classroomAddress='{{item.classroomAddress}}' data-classroomID="{{item.id}}" hover-start-time="150" hover-class="activeBtn">
+      <view class="icon flexcenter">
+        <view class="iconfont icon-guanyu"></view>
+      </view>
+      <view class="grow lableText flex flexdc">
+        <view>{{item.classroomAddress}}</view>
+        <!-- <view>地址:教学楼101</view> -->
+      </view>
+      <view class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></view>
+    </view>
+  </scroll-view>
+  <!-- </view> -->
+</view>

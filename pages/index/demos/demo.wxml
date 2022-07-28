@@ -1,0 +1,144 @@
+<!--pages/index/demo/demo.wxml-->
+<view class="top_title">
+	<headtop title="批量控制"></headtop>
+</view>
+<!-- 顶部控制按钮 -->
+<!-- <view class="topBox " >
+	<view class="addFnc left clearfix ">
+		<view class="addFnc-btn">新增控制</view>
+	</view>
+	<view class="edit right clearfix" bind:tap="edit">
+		<view class="edit-btn">编辑</view>
+	</view>
+</view> -->
+<!-- 功能导航 -->
+<view class="school nav-box clearfix">
+	<view class="  iot-box">
+		<view class="iot-box-text">
+				<view class="text-box">已选设备</view>
+			</view>
+		<view class="school_box">
+			<view wx:for="{{schoolArr}}" class="school_item" wx:key="index">
+				<view class="school_item_place">{{item.place}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="nav-box clearfix  " id="nav-boxs">
+	<view class="iot-box ">
+		<view class="iot-box-text">
+			<view class="text-box">智能物联</view>
+		</view>
+		<view class="nav-content" wx:for="{{ iotITemsTest }}" wx:key="index" data-type="iotITems" data-index=" index ">
+			<block class="content-item">
+				<view class="content-box clearfix">
+					<view class="content-text left clearfix">{{ item.name}}</view>
+					<view class="right clearfix swt">
+						<switch type="switch" checked="{{item.isChecked}}" color="#4eb5e5" data-detail="{{item}}"
+							data-type="iotITemsTest" bindchange="change"></switch>
+					</view>
+					<!-- type == button -->
+					<view wx:if="{{ item.options.type == 'button'}}">
+						<radio-group bindchange="iot_btn_change" class="iot_btn" data-method="{{item.options.method}}">
+							<view wx:for="{{item.options.configs}}" wx:for-item="items" wx:for-index="indexs" wx:key="indexs"
+								class="iot_btn_items">
+								<radio value="{{items.attr}}" class="iot_radio" disabled="{{!item.isChecked}}"
+									checked="{{items.isChecked}}">
+									<view class="iot_comment"> {{items.comment}}</view>
+								</radio>
+							</view>
+						</radio-group>
+					</view>
+
+					<!-- 删除按钮 -->
+					<view class="del " wx:if="{{ isEdit }}">
+						<view class=" delbox">
+							<i class="iconfont icon-10"></i>
+						</view>
+					</view>
+
+				</view>
+			</block>
+		</view>
+	</view>
+
+	<!-- 音频控制  -->
+	<view class="iot-box ">
+		<view class="iot-box-text">
+			<view class="text-box">音视频控制</view>
+		</view>
+		<view class="outPut_box" wx:for="{{outputItemsTest}}" wx:index="id" wx:key="index">
+			<block class="nav-content">
+				<!-- 麦克 -->
+				<view class="lable " wx:if="{{item.options.type == 'slider'}}">
+					<view class="ibk-box clearfix">
+						<view class="ibk  left clearfix">{{ item.name }}</view>
+
+						<view class="iconfont  baseAct left clearfix icon-ziyuan"></view>
+						<!-- <detal wx:if="{{ isEdit }}" /> -->
+						<view class="swt right clearfix">
+							<switch type="switch" checked="{{ item.isChecked}}" color="#4eb5e5" data-detail="{{item}}"
+								data-type="outputItemsTest" bindchange="change"></switch>
+						</view>
+					</view>
+					<!-- 滑块 -->
+					<view class="slider-box">
+						<slider class="slider ibk" bindchange="makechange" step="5" value="{{item.mikeval}}" max="87"
+							selected-color="#4eb5e5" block-size="20" disabled="{{!item.isChecked}}"
+							data-detail="{{ item}}" />
+						<view class="ibk">{{item.mikeval}}</view>
+					</view>
+				</view>
+			</block>
+			<!-- 高清切换 -->
+			<block class="nav-content" wx:if="{{item.options.type == 'radio'}}">
+				<view class="lable ">
+					<view class="ibk-box clearfix">
+						<view class="ibk  left clearfix">{{item.name}}</view>
+						<!-- <detal wx:if="{{ isEdit }}" /> -->
+						<view class="swt right clearfix">
+							<switch type="switch" checked="{{item.isChecked}}" color="#4eb5e5" bindchange="change"
+								data-detail="{{item}}" data-type="outputItemsTest"></switch>
+						</view>
+					</view>
+					<!-- 输出类型 -->
+					<radio-group bindchange="radioChange" data-detail="{{item}}" >
+						<view class="weui-cell">
+							<view class="item clearfix" wx:for="{{ item.options.configs }}" wx:key="index" wx:for-item="items">
+								<view class="item-box  clearfix">
+									<view class="weui-cell__hd left ">
+										<radio checked="true" value="{{items.attr}}" disabled="{{! item.isChecked}}"
+											checked="{{ items.isChecked}}">
+											<view class="weui-cell__bd  left  ">{{items.comment}}</view>
+										</radio>
+									</view>
+								</view>
+							</view>
+						</view>
+					</radio-group>
+				</view>
+			</block>
+		</view>
+	</view>
+
+
+	<!-- 教室环境 -->
+	<!-- <view class="iot-box ">
+		<view class="iot-box-text">
+			<view class="text-box">教室环境</view>
+		</view>
+		<view class="nav-content-amb">
+
+
+			<view class="amb-box" wx:for="{{   ambientItemsTest }}" wx:key="index">
+				<view class="detal">
+					<detal wx:if="{{ isEdit }}" />
+				</view>
+				<view class="amb-item">
+					<view class="item-num">{{item.name}}</view>
+					<view class="item-name">{{ item.view_key }}</view>
+				</view>
+			</view>
+		</view>
+	</view> -->
+</view>

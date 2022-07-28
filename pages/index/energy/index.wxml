@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+  <view class="topBox">
+    <headtop title="能耗统计"></headtop>
+  </view>
+  <!-- 地点 时间选择 -->
+  <view class="select">
+  <!-- 地址 -->
+  <view class="site left">
+  <view class="clearfix">
+  <view class="site-text left">位置:</view>
+  <view class="site--box left">
+  <view class="site-boxs left"  bindtap="siteChange" >{{site}}</view>
+  <view class=" iconfont left {{siteShow?'icon-shang':'icon-xiala1'}}"  bindtap="siteChange"></view>
+  </view>
+  </view>
+  <view hidden="{{!siteShow}}" class="site_show">
+  <view class="site-box all" bindtap="allchang">全部...</view>
+  <view  class="site-select " wx:for="{{ selectList}}" wx:key="id">
+  <view class="site-box" bindtap="chang"  data-item="{{ item.location}}" data-id="{{ item.id}}" data-type="site">{{ item.location }}</view>
+
+  </view>
+  </view>
+   </view>
+   <!-- 时间 -->
+     <!-- 地址 -->
+  <view class="time left clearfix">
+  <view class="clearfix">
+  <view class="time-text left">时间:</view>
+  <view class="left"  >
+  <view class="time-boxs left" bindtap="timeChange">{{ time }}个月</view>
+  <view class=" iconfont {{timeShow?'icon-shang':'icon-xiala1'}} left" bindtap="timeChange"></view>
+  </view>
+
+  </view>
+  <view class="time_box">
+  <view  hidden="{{ !timeShow }}" class="time-select " wx:for="{{times}}" wx:key="index">
+  <view class="time-box" data-type="time" data-item="{{item}}" bindtap="chang">{{item}}个月</view>
+</view>
+
+  </view>
+   </view>
+  </view>
+
+  <!-- 表格 -->
+  <view class="energymain" hidden="{{!listShow}}">
+    <view class="table">
+      <view class="tr">
+        <!-- <view class="th">序号</view> -->
+        <view class="th">地址</view>
+        <view class="th">时间</view>
+        <view class="th">设备耗能(kw/h)</view>
+        <view class="th">总耗能(kw/h)</view>
+      </view>
+      <block wx:for="{{energyList}}" wx:key="index">
+      <view class="tr">
+        <view class="td">{{item.location}}</view>
+        <view class="td">{{item.month}}</view>
+        <view class="td">{{item.device}}</view>
+        <view class="td">{{item.total}}</view>
+      </view>
+      </block>
+    </view>
+  </view>
+ 
+</view>

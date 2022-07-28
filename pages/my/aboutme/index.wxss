@@ -1,0 +1,39 @@
+.about{
+  width:100%;
+}
+
+.verify{
+  width:50%;
+  margin:0 auto;
+  margin-top: 100rpx;
+}
+
+.content{
+  text-align: center;
+  margin-top: 30rpx
+}
+
+.c-title{
+  color: #0d07fa;
+  font-size: 50rpx;
+}
+
+.wei{
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+page{
+  background-color: #fff;
+}
+
+.wei{
+  margin-top: 150rpx;
+}
+.basefs{
+  color: #999;
+}
+.content .version{
+  letter-spacing: 2rpx;
+  margin-top: 20rpx;
+}

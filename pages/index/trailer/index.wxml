@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+  <view class="video">
+    <video id="myVideo" autoplay class="myVideo" bindplay="onPlay" bindpause="onSuspend" bindwaiting="onVideload" show-center-play-btn="false" poster="../../../img/fengmian2.jpg" src="https://wx.litpsmart.com/upload/30b90ed6df1c4dc052d862b8f7ada708b2d5a64f.mp4"
+      custom-cache="{{false}}" bindfullscreenchange="fullScreen">
+    </video>
+    <!-- <cover-view class="coverBg flexcenter" wx:if="{{coverBg}}">
+      <cover-image src="../../../img/fengmian.jpg" />
+    </cover-view> -->
+    <cover-view class="stopBg flexcenter" wx:if="{{stopBg}}" bindtap="startplay">
+      <cover-image class="stopbtn" src="../../../img/zanting.png" />
+    </cover-view>
+  </view>
+  <view class="xctent">
+    广州力扑<span class="ztbj"></span>科技引领未来，让工作更高效，让教室更智能
+  </view>
+  <view class="fens">
+    <button type="primary" open-type="share" size="mini">
+      <view class="iconfont icon-weixin ibk"></view>
+      分享好友</button>
+  </view>
+  <viem class="tel" bindtap="tel">热线：4000-968-929</viem>
+
+
+</view>

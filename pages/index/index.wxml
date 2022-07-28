@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="home">
+  <view class="topHead flex  plr40" bindtap="clickScan" style="height:{{statusBarHeight+46}}px;padding-top:{{statusBarHeight+6}}px">
+    <view class="iconfont icon-552dc065f0478 ibk  sao"></view>
+    <view class="text">力扑智慧</view>
+  </view>
+  <view class="swiper" bindtap="goAuth">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="#fff" indicator-active-color="#18d9be" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item class="banner-img plr40">
+          <image src="{{item}}" mode="widthFix" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="menu flexwrap plr40">
+    <view class="flex flexjcsb wd100">
+      <view class="li " bindtap="goMenu" data-menuname="device">
+        <view class="backdrop">
+        </view>
+        <view class="container flexcenter flexdc">
+          <view class="iconfont icon-diannao"></view>
+          <view class="wd100 tc basefs">设备管理</view>
+        </view>
+      </view>
+      <view class="li  " bindtap="goMenu" data-menuname="task">
+        <view class="backdrop">
+        </view>
+        <view class="container flexcenter flexdc">
+          <view class="iconfont icon-task"></view>
+          <view class="wd100 tc basefs">任务管理</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="flex flexjcsb wd100">
+      <view class="li  " bindtap="goMenu" data-menuname="appointment">
+        <view class="backdrop">
+        </view>
+        <view class="container flexcenter flexdc">
+          <view class="iconfont icon-reserve"></view>
+          <view class="wd100 tc basefs">预约教室</view>
+        </view>
+      </view>
+
+      <view class="li  " bindtap="goMenu" data-menuname="patrol">
+        <view class="backdrop">
+        </view>
+        <view class="container flexcenter flexdc">
+          <view class="iconfont icon-weibiaoti--2"></view>
+          <view class="wd100 tc basefs">掌上巡课</view>
+        </view>
+      </view>
+    </view>
+    <view class="flex flexjcsb wd100">
+      <view class="li  " bindtap="goMenu" data-menuname="energy">
+        <view class="backdrop">
+        </view>
+        <view class="container flexcenter flexdc">
+          <view class="iconfont icon-zhexiantu"></view>
+          <view class="wd100 tc basefs">能耗统计</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+
+</view>

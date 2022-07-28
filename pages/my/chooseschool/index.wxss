@@ -1,0 +1,70 @@
+page{
+  background-color: #fff;
+}
+
+.yesline{
+  background-color: #8daadb
+}
+.Unonline{
+  opacity: 0.6;
+
+}
+.list_item{
+  padding: 0 20rpx;
+  line-height: 55rpx;
+
+}
+
+ .container .icon-xuexiao {
+   font-size: 100rpx;
+   color: brown;
+   
+ }
+ .Noonline .icon-xuexiao {
+  color: rgb(141, 96, 96);
+ }
+ .Noonline {
+   background: rgb(216, 214, 214) !important;
+ }
+ .currentOnline{
+      /* background: #719eea; */
+      margin: 0 32rpx;
+      /* border-radius: 18rpx; */
+      /* padding: 4rpx; */
+      font-size: 30rpx;
+      color: #1aad19;
+      font-weight: 600;
+ }
+ .container .line {
+  display: flex;
+  padding:30rpx;
+  border-bottom: 2rpx solid #ebebeb;
+  position: relative;
+  cursor: pointer;
+ }
+ .operation {
+  position: absolute;
+  top: 0;
+  right: -170rpx;
+  height: 152rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 152rpx;
+  display: flex;
+  margin:10rpx
+ }
+   
+ .operation view {
+  width: 150rpx;
+ }
+   
+ .operation .delete {
+  background-color: #f35221;
+ }
+ .container .line .mes {
+  flex: 1;
+  margin-left: 10rpx;
+ }
+ .btn{
+   margin-top: 26rpx;
+ }

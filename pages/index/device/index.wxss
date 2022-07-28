@@ -1,0 +1,261 @@
+@import '../taskmanage/index.wxss';
+
+.searchSolt .seach{
+  width: 90%;
+  margin: 20rpx auto;
+}
+
+.thead{
+  border-bottom: 1rpx solid #ccc;
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* background-color: var(--theadbg); */
+  background: #fff;
+  color: #222;
+  
+}
+
+
+.thead .title{
+  width: 200rpx;
+}
+.num{
+  width: 55rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--bglabel);
+  color: var(--cfff);
+}
+
+.con{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.conWrap .con .btn-box{
+  width:34%;
+  height: 160rpx;
+  margin:auto;
+  text-align: center;
+  margin:20rpx 20rpx;
+
+ 
+}
+.conWrap .con .icon-box{
+  margin:auto;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background-color:#999999 ;
+  text-align: center;
+}
+
+.con .li .title{
+  width: 200rpx;
+  height: 120rpx;
+}
+
+radio-group{
+  padding: 15rpx 0;
+}
+radio-group radio{
+  margin-right: 10rpx;
+}
+.thead radio-group {
+  padding: 0;
+  width: 180rpx;
+}
+
+
+.icon image{
+  width: 60rpx;
+}
+
+.batch{
+  padding: 0 15rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 15rpx;
+  background-color: var(--addbtnbg);
+  color: var(--cfff);
+  margin-left: 10rpx;
+  position: absolute;
+  right: 40rpx;
+  top:10rpx;
+}
+.thead{
+  padding: 0 40rpx;
+}
+.main .li{
+  padding: 20rpx 40rpx;
+  position: relative;
+}
+.on{
+  background: #fff;
+}
+
+.batchControl .conWrap .iconfont{
+  color: #fff;
+  font-size: 50rpx;
+  line-height: 110rpx;
+}
+.dengactive{
+  /* background-color: rgb(238, 167, 74) !important; */
+  color:  rgb(244, 75, 54)  !important;
+  /* background: #4caf518c; */
+}
+.weizhiactive{
+  background-color: green !important;
+}
+.batchControl-box{
+  height: 600rpx;
+}
+.deviceIcon .iconfont{
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.iconBox{
+  color:#ffa500 ;
+  font-size: 18px;
+}
+.detailsBtn {
+  position: absolute;
+  right: 0rpx;
+  line-height: 120rpx;
+  color: #222;
+  top: 0rpx;
+}
+ .liCon_box{
+  /* width: calc( 100vw - 20rpx ); */
+  width: 120vw;
+  overflow: hidden;
+  position: relative;
+  height: 120rpx;
+  color: #222;
+  background: #fff;
+}
+.unliCon_box{
+  /* width: calc( 100vw - 20rpx ); */
+  width: 120vw;
+  overflow: hidden;
+  position: relative;
+  height: 120rpx;
+  /* background: rgb(231, 229, 229); */
+  color: #797777;
+}
+.on{
+   color: #222;
+   background: #fff;
+}
+.un{
+   color: #797777;
+}
+
+.device-seat{
+  position: absolute;
+  right: 80rpx;
+  height: 100rpx;
+  /* color: #222; */
+  top: 10rpx;
+}
+.deviceIcon{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.device_scroll{
+  position: relative;
+  height: calc( 100% - 250rpx);
+  top: 250rpx;
+}
+.device_scroll_box{
+  padding-bottom: 50rpx;
+}
+.operation_delete{
+  right: -130rpx;
+  background-color: #f56c6c;
+  position: absolute;
+  top: 0rpx;
+  height: 120rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 120rpx;
+  margin:20rpx
+ }
+ .operation_delete .modifys{
+  background-color: #f56c6c;
+
+ }
+ .top-btn-box{
+  /* background: #fff; */
+   background: rgb(243, 241, 241);
+  display: flex;
+  justify-content: space-around;
+ }
+ .top-btn{
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  height: 150rpx;
+  width: 22vw;
+  text-align: center;
+  /* background: rgb(243, 241, 241); */
+  background: #fff;
+  margin: 14rpx 0rpx;
+  color: #222;
+ }
+ /* .top-btn .icon{
+
+ } */
+ .top-btn .icon .iconfont{
+  font-size: 60rpx;
+  line-height: 100rpx;
+ }
+ .top-btn .top-btn-name{
+  font-size: 32rpx;
+}
+.mode{
+  border: rgb(145, 141, 141) 1rpx solid;
+  line-height: 30rpx;
+  height: 60rpx;
+  margin: 2rpx 8rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  /* background: linear-gradient(rgb(240, 237, 237),rgb(184, 182, 182)); */
+  border-bottom: 4rpx solid rgb(114, 112, 112);
+  width: 200rpx;
+  position: relative;
+  top: 8rpx;
+  /* right: ; */
+  left: calc(100vw - 400rpx);
+}
+.sort_xiala1 {
+  font-size: 30rpx;
+  color: rgb(71, 69, 69);
+
+}
+.sort_shang {
+  font-size: 30rpx;
+  color: rgb(140, 137, 137);
+
+}
+.sort_text{
+  line-height: 40rpx;
+  position: absolute;
+  top: 10rpx;
+  width: 70rpx;
+}
+.sort_icon{
+  width: 30rpx;
+    height: 60rpx;
+    /* overflow: hidden; */
+    position: absolute;
+    right: 12rpx;
+    top: 4rpx;
+}
+.shang_active{
+  color:#3d3dec;
+}

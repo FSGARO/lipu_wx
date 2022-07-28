@@ -1,0 +1,11 @@
+.iconfont{
+  color: red;
+  font-size: 50rpx;
+}
+.del{
+  width:50rpx;
+  display: inline-block;
+  padding:0 10rpx;
+}
+
+ 

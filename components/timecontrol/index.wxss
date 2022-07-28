@@ -1,0 +1,55 @@
+@import '../../utils/addaudio.wxss';
+.sync_tabGroup{
+  padding: 10rpx 15rpx;
+}
+
+.sync_tabGroup .tab{
+  padding: 8rpx 20rpx;
+  border-radius: 15rpx; 
+}
+
+.sync_Con{
+  background-color: var(--cfff);
+} 
+
+.sync_tabCon>view{
+  padding: 30rpx 20rpx 30rpx 60rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+
+.sync_tabCon>view:last-child{
+  border-bottom: none;
+}
+
+
+.degree .btn{
+  width: 43rpx;
+  height: 43rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.degree .setting{
+  width: 430rpx;
+  padding: 20rpx 0;
+}
+
+.degree .numVal{
+  font-size: 43rpx;
+}
+.degree .pattern .flex1{
+  margin-left: 50rpx;
+}
+
+.radio-group{
+  display: flex;
+  justify-content: start;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.radios{
+  width: 40vw;
+}
+
+

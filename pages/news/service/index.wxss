@@ -1,0 +1,43 @@
+.empty{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid #dedbdb;
+}
+
+.iconfont{
+  margin-right: 10rpx;
+}
+
+.contentli{
+  padding: 20rpx 30rpx;
+  width:100%;
+  background-color: #fff;
+}
+
+.title{
+  width:100%;
+  text-align: right;
+}
+.tt{
+  width: 50%;
+  display: inline-block;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ttime{
+  width:50%;
+  display: inline-block;
+}
+
+.contents{
+  margin:20rpx 0;
+}
+.service>view{
+  box-sizing: border-box;
+}

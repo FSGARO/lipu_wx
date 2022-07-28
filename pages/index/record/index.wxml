@@ -1,0 +1,84 @@
+<!--pages/index/record/index.wxml-->
+<view class="record">
+  <headtop title="执行记录"></headtop>
+  <view class="record_box">
+    <view class="clearfix record_top">
+      <view class=" totals left">
+        总计{{total}}条
+      </view>
+      <view class="delete  right clearfix">
+        <view class="pick_time left">
+          <view class="tui-picker-content">
+            <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" range="{{dateTimeArray}}">
+              <view class="tui-picker-detail mode  " hover-class="activeBtn">
+                选择删除时间
+              </view>
+            </picker>
+            <view class="eject_box " wx:if="{{isDelete}}">
+              <view>
+                <view class="eject_text">是否确认删除</view>
+                <view class="eject_time  eject_text">
+                  {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}}
+                  {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+                </view>
+                <view class="eject_text">之前的执行记录</view>
+              </view>
+              <view class="isDelete  clearfix">
+                <view class="cancel btn left" bindtap="cancel" hover-class="activeBtn">取消</view>
+                <view class="define btn right" bindtap="define" hover-class="activeBtn">确定</view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+        <view bindtap="allDelete" class="pick_all mode allmode right " hover-class="activeBtn">全部删除</view>
+      </view>
+    </view>
+    <scroll-view class="scroll_box" scroll-y	bindscrolltolower="lower"	>
+      <view class="record_list">
+        <view class="list_box " wx:for="{{record_list}}" wx:key="index">
+          <view class="list_box_item ">
+            <view>
+              <view class="record_time">{{item.timestamp[0]}}</view>
+              <view class="record_time ">{{item.timestamp[1]}}</view>
+            </view>
+            <view>
+              <view class="run_cost clearfix">
+                <view class="cost_text left">执行耗时:</view>
+                <view class="cost_time right">{{item.run_cost}}ms</view>
+              </view>
+              <view class="run_cost clearfix">
+                <view class="cost_text left">执行类型:</view>
+                <view class="cost_time right">{{item.runOnce}}</view>
+              </view>
+
+            </view>
+            <!-- <view class="xiangqing"> 详情</view> -->
+            <!-- <view class=" iconfont right"> -->
+            <view class="xiangqing" bindtap="showXQ" data-index="{{index}}" hover-class="activeBtn">
+              <view class="xq_text">详情</view>
+            </view>
+            <!-- </view> -->
+          </view>
+          <!-- 详情内容 -->
+          <view wx:if="{{item.isShow}}" class="XQ">
+            <view class="XQcontent">
+              <view class="items devid">设备</view>
+              <view class="items mode_name">操作名</view>
+              <view class="items  itemss cost">耗时(ms)</view>
+              <view class="items result">结果</view>
+            </view>
+            <view class="content_box">
+              <view wx:for="{{item.results}}" wx:for-item="items" wx:key="index" class=" content_box_items flex">
+                <view class="items">{{  items.devid}}</view>
+                <view class="items">{{  items.mode_name}}</view>
+                <view class="itemss items">{{  items.cost}}</view>
+                <view class="items">{{  items.result}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="deitinfo flex flexdc">
+  <headtop title="编辑信息"></headtop>
+  <view class="main">
+    <view class="tabgroup basefs32">
+      <view class="tabtn {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">推送字幕</view>
+      <view class="tabtn {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">发布消息</view>
+    </view>
+    <form bindsubmit="pushForm" class="pushForm">
+      <view class="basefs32 {{currentTab == 0 ? 'show':'hidden'}}">
+        <scroll-view>
+          <view class="content">
+            <textarea name="sbucontent" value="{{pushForm.sbucontent}}" placeholder="请输入内容"></textarea>
+          </view>
+          <view class="bgfff">
+            <view class="labelText flex flexjcsb flexac">
+              <view>字体颜色</view>
+              <view class="colorboard" style="background-color:{{selectColorval}}" bindtap="showSelectcolor"></view>
+            </view>
+            <view class="labelText flex flexjcsb flexac">
+              <view>播放时长</view>
+              <input name="duratime" value="{{pushForm.duratime}}" placeholder="单位(S)" width="200rpx" placeholder-class="playtime"></input>
+            </view>
+            <view class="labelText flex flexjcsb flexac">
+              <view>添加对象</view>
+              <view>
+                <button type="primary" size="mini" class="addcal basefs32" bindtap="addClass" data-type="zimu">添加班级</button>
+              </view>
+            </view>
+          </view>
+          <view class="classlist">
+            <textarea name="zimu" disabled  placeholder="请添加班级或者用户" value="{{pushForm.classlist}}"></textarea>
+            <text></text>
+          </view>
+          <button form-type="submit" type="primary" class="fab">发布</button>
+        </scroll-view>
+      </view>
+    </form>
+    <form bindsubmit="newForm" class="newForm">
+      <view class="basefs32 {{currentTab == 1 ? 'show':'hidden'}}">
+        <scroll-view>
+          <view class="formtitle ">
+            <view class="flex">标题：</view>
+            <input type="text" class="tinput" name="title" value="{{newsform.title}}" placeholder="请输入标题" bindinput="titleInput"></input>
+          </view>
+          <view class="content">
+            <textarea name="newcontent" value="{{newsform.newcontent}}" placeholder="请输入内容"></textarea>
+          </view>
+          <view class="labelText flex flexjcsb flexac bj">
+            <view>添加对象</view>
+            <view>
+              <button type="primary" size="mini" class="addcal" bindtap="addClass" data-type="msg">添加班级</button>
+            </view>
+          </view>
+           <view class="classlist">
+            <textarea disabled placeholder="请添加班级或者用户" value="{{newsform.classlist}}"></textarea>
+          </view>
+          <button form-type="submit" type="primary" class="fab flexcenter">发布</button>
+        </scroll-view>
+      </view>
+    </form>
+  </view>
+  <view class="model" wx:if="{{colorBoard}}" bindtap="showSelectcolor"></view>
+  <colorpicker class="selectColor" wx:if="{{colorBoard}}" colorData="{{colorData}}" rpxRatio="{{rpxRatio}}" bindchangecolor="onChangeColor" bindselectColor="selectColorval"></colorpicker>
+
+
+</view>

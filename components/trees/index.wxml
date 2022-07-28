@@ -1,0 +1,20 @@
+<view class="tree_container">
+<!-- <checkbox-group bindchange="checkboxChanges"> -->
+
+  <view wx:for="{{treesArr}}" style="padding-left: {{treeArrIndex*10}}px" wx:key="index" data-index="index">
+    <view data-item="{{item}}" catchtap="tapTreeItem" data-id="{{item.id}}"  class="treeArrItem">
+     <!-- 小尖 -->
+    <view class=" iconfont tip  {{ item.collapse?'icon-xiala2':'icon-xiangqing'}}"   wx:if="{{item.items}}"></view>
+      <checkbox checked="{{item.checked}}" catchtap="checkboxChanges" value="{{item.id}}" data-item="{{item}}"></checkbox>
+      <text>{{item.name}}</text>
+      
+    </view>
+    <!-- <view wx:if="{{treeList.items}}" class="weui-cell__ft weui-cell__ft_in-access {{!collapse ? 'nocollapse_icon' : ''}}">
+    </view> -->
+    <block>
+      <trees wx:if="{{item.items && item.collapse}}" treesArr="{{ item.items }}" treeArrIndex="{{treeArrIndex+1}}" bind:treeTapp="treeTapp"  bind:treeTapss="treeTapss"/>
+    </block>
+  </view>
+<!-- </checkbox-group> -->
+</view>
+

@@ -1,0 +1,84 @@
+<!--index.wxml-->
+
+    <!-- <headtop title="任务管理"></headtop> -->
+ 
+<view >
+ <view class="topbg">
+ <!-- <headtop title="消息中心"></headtop> -->
+ <view class="tc" bindtap="goBroadcast" class="broadcast tc">
+ <view class="soundrecording tc ibk">
+        <view class="audioIcon iconfont icon-luyin"></view>
+      </view>
+      <view class="tc text ">紧急广播</view>
+    </view>
+   </view>
+  <!-- <view class="topbg">
+    <headtop title="消息中心"></headtop> -->
+    <!-- <view class="tc" bindtap="goBroadcast" class="broadcast tc">
+      <view class="soundrecording tc ibk">
+        <view class="audioIcon iconfont icon-luyin"></view>
+      </view>
+      <view class="tc text ">紧急广播</view>
+    </view>
+   </view> -->
+  <view class="con pageMenuCon">
+    <view class="li flex " bindtap="goMsglist">
+      <view class="icon flexcenter iconxiaonei iconbox">
+        <view class="audioIcon iconfont icon-xiaoneiwenda"></view>
+      </view>
+      <view class="info grow flex flexjcfs flexdc flexjcsb">
+        <view class="flex flexjcsb">
+          <view class="info-title basefs">校内消息</view>
+          <!-- <view class="date">2019-09-16 10:17:32</view> -->
+        </view>
+        <view class="msg-text">
+          <!-- 尊敬的用户；感谢您对此校园融合系撒打算但是我 -->
+        </view>
+      </view>
+    </view>
+    <view class="li flex " bindtap="goMsglist">
+      <view class="icon flexcenter iconxitong iconbox">
+        <view class="audioIcon iconfont icon-xiaoxi1"></view>
+      </view>
+      <view class="info grow flex flexdc flexjcsb">
+        <view class="flex flexjcsb">
+          <view class="info-title basefs">系统消息</view>
+          <!-- <view class="date">2019-09-16 10:17:32</view> -->
+        </view>
+        <!-- <view class="msg-text">
+            尊敬的用户；感谢您对此校园融合系撒打算但是我
+          </view> -->
+      </view>
+    </view>
+    <view class="li flex " bindtap="service">
+      <view class="icon flexcenter iconfuwu iconbox">
+        <view class="audioIcon iconfont icon-fuwu"></view>
+      </view>
+      <view class="info grow flex flexjcfs flexdc flexjcsb">
+        <view class="flex flexjcsb">
+          <view class="info-title basefs ">服务消息</view>
+
+          <!-- <view class="lablecolor basefs2">2019-09-16 10:17:32</view> -->
+        </view>
+        <view class="msg-text lablecolor basefs2">
+          尊敬的用户；感谢您对此校园融合系撒打算但是我
+        </view>
+      </view>
+    </view>
+    <view class="li flex " bindtap="goMsglist">
+      <view class="icon flexcenter iconxitong iconbox">
+        <view class="audioIcon iconfont icon-ziyuan56"></view>
+      </view>
+      <view class="info grow flex flexdc flexjcsb">
+        <view class="flex flexjcsb  info-msg">
+          <view class="info-title basefs info-msg" >设备消息</view>
+          <view class="unread-count" wx:if="{{total != 0}}">{{total}}</view>
+          <!-- <view class="date">2019-09-16 10:17:32</view> -->
+        </view>
+        <view class="msg-text">
+            尊敬的用户；感谢您对此校园融合系撒打算但是我
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

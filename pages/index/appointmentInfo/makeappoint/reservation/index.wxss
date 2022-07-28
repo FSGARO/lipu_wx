@@ -1,0 +1,68 @@
+.yuyueye {
+	width: 100%;
+}
+
+.kaishi {
+	width: 100%;
+	line-height: 106rpx;
+	border-bottom: solid 1rpx #ccc;
+	padding-left: 30rpx;
+	box-sizing: border-box;
+}
+textarea {
+	padding-left: 30rpx;
+}
+.times {
+	display: inline-block;
+	color: #000;
+	text-align: right;
+	float: right;
+	margin-right: 20rpx;
+}
+.section {
+	border-bottom: solid 1rpx #ccc;
+	margin-top: 20rpx;
+	text-indent: 1em;
+}
+.section1 {
+	margin-top: 60rpx;
+	text-indent: 1em;
+}
+.sectioncent {
+	margin-top: 20rpx;
+	color: #000;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+.yychenggong {
+	width: 54%;
+	background-color: #faeadd;
+	margin: 50rpx auto;
+	color: #000;
+	line-height: 160rpx;
+	border-radius: 10rpx;
+	text-align: center;
+}
+.tup {
+	width: 100%;
+	text-align: center;
+}
+.img1 {
+	width: 60%;
+}
+.lookbtn {
+	width: 80%;
+	margin: 50rpx auto;
+}
+
+.tip {
+	color: #000;
+}
+.tip::after {
+	content: '*';
+	color: red;
+}

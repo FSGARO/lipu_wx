@@ -1,0 +1,77 @@
+.energymain , .select {
+  width: 95%;
+  margin: 10rpx auto;
+}
+.select{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  margin:30rpx 0 20rpx 0;
+}
+.site-text , .time-text{
+  width: 76rpx;
+  text-align: center;
+  line-height: 20rpx;
+  padding-top: 16rpx;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+ 
+}
+.site-boxs , .time-boxs{
+  width: 280rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border:1rpx solid #ccc;
+  padding: 10rpx;
+  
+}
+.time-boxs{
+  width: 120rpx;
+}
+.site-select , .time-select{
+  width: 280rpx;
+
+}
+.time-select{
+  width:120rpx
+}
+.site-box , .time-box{
+  text-align: center;
+  line-height: 30rpx;
+padding: 14rpx 0rpx;
+width: 280rpx;
+}
+.time-box{
+  width:120rpx;
+}
+.iconfont{
+  line-height: 50rpx;
+  text-align: center;
+  width: 40rpx;
+  height: 50rpx;
+}
+.all{
+
+  padding: 10rpx 0rpx;
+}
+.site_show{
+  border: 1rpx solid #d2cece;
+  width: 300rpx;
+  overflow: hidden;
+  text-align: center;
+  margin-left: 86rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.time_box{
+  border: 1rpx solid #d2cece;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 138rpx;
+  margin-left: 88rpx;
+}
+
+
+

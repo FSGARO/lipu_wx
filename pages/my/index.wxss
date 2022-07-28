@@ -1,0 +1,80 @@
+/**index.wxss**/
+.top {
+	height: 400rpx;
+	/* background-color: var(--bglabel); */
+	/* background:linear-gradient(#9590ff, #6077ff); */
+	background: linear-gradient(#609afd, #acc7f5);
+}
+
+.userInfo {
+	height: 100%;
+	padding-left: 50rpx;
+}
+.userInfo image {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+.userInfo .username {
+	font-size: 46rpx;
+	color: var(--cfff);
+	padding-left: 20rpx;
+}
+.avatar {
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+	border: 4rpx solid #fff;
+	overflow: hidden;
+}
+
+.signout {
+	width: 100%;
+	height: 90rpx;
+	line-height: 90rpx;
+}
+
+page {
+	background-color: #fff;
+}
+/* .avatar .img {
+	width: 90%;
+} */
+
+.my .iconfont {
+	color: #fff;
+	font-size: 36rpx;
+}
+
+.icon-changyongtubiao-xianxingdaochu-zhuanqu- {
+	color: #666 !important;
+}
+.modify .icon {
+	background-color: #844edf;
+}
+.school .icon {
+	background-color: #5269fc;
+}
+.qrcode .icon {
+	background-color: #844edf;
+}
+.about .icon {
+	background-color: #1eaa39;
+}
+.listCon .lableText {
+	padding-left: 40rpx;
+}
+.pageMenuCon .iconbox .iconfont {
+	font-size: 50rpx;
+}
+.warpper {
+	display: flex;
+	/* align-content: center; */
+	align-items: center;
+}
+.infoBtn {
+	margin-top: 100rpx;
+	color: white !important;
+	border-color: white !important;
+	font-size: 42rpx;
+}

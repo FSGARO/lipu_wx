@@ -1,0 +1,253 @@
+<view>
+  <view class="addaudio">
+    <view class="priority flex flexjcsb">
+      <view class="name">
+        <view>名称</view>
+        <input type="text" placeholder="请输入名称" value="{{}}"></input>
+      </view>
+      <view class="selectPriority flex flexac">
+        <picker class="ibk wd100" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="layout mtli">
+      <view class="tabcon flex">
+        <view class="text flexcenter">
+          <text wx-if="{{ selectLayout=='layout1'}}">布局一</text>
+          <text wx-if="{{ selectLayout=='layout2'}}">布局二</text>
+          <text wx-if="{{ selectLayout=='layout3'}}">布局三</text>
+          <text wx-if="{{ selectLayout=='layout4'}}">布局四</text>
+          <text wx-if="{{ selectLayout=='layout5'}}">布局五</text>
+          <text wx-if="{{ selectLayout=='layout6'}}">布局六</text>
+          <text wx-if="{{ selectLayout=='layout7'}}">布局七</text>
+          <text wx-if="{{ selectLayout=='layout8'}}">布局八</text>
+          <text wx-if="{{ selectLayout=='layout9'}}">布局九</text>
+
+        </view>
+
+
+        <view class="chart grow">
+          <view class="layout-box flexcenter layout-box1" wx-if="{{ selectLayout=='layout1'}}">
+            <view class="box-num flexcenter">1</view>
+          </view>
+          <view class="layout-box flexcenter layout-box2 flex" wx-if="{{ selectLayout=='layout2'}}">
+            <view class="flex1 flexcenter he100 brboxl">
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class="flex1 flexcenter">
+              <view class="box-num flexcenter">2</view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box3 flexdc" wx-if="{{ selectLayout=='layout3'}}">
+            <view class="flex1 flexcenter">
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class="flex1 flexcenter brboxt wd100">
+              <view class="box-num flexcenter">2</view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box4" wx-if="{{ selectLayout=='layout4'}}">
+            <view class="flex1 flexcenter he100 brboxl">
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class="flex1 flexcenter he100 brboxl">
+              <view class="box-num flexcenter">2</view>
+            </view>
+            <view class="flex1 flexcenter">
+              <view class="box-num flexcenter">3</view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box5 flexdc" wx-if="{{ selectLayout=='layout5'}}">
+            <view class="flex1 flexcenter">
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class="flex1 flexcenter brboxt wd100">
+              <view class="box-num flexcenter">2</view>
+            </view>
+            <view class="flex1 flexcenter brboxt wd100">
+              <view class="box-num flexcenter">2</view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box6" wx-if="{{ selectLayout=='layout6'}}">
+            <view class="flex1 flexcenter he100 brboxl">
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class="flex1 flex flexdc he100">
+              <view class="flex1 flexcenter ">
+                <view class="box-num flexcenter">2</view>
+              </view>
+              <view class="flex1 flexcenter brboxt">
+                <view class="box-num flexcenter">3</view>
+              </view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box7" wx-if="{{ selectLayout=='layout7'}}">
+            <view class="flex1 flexcenter he100 brboxl flexdc">
+              <view class="flex1_5 wd100 flexcenter ">
+                <view class="box-num flexcenter">1</view>
+              </view>
+              <view class="flex1 wd100 flexcenter brboxt">
+                <view class="box-num flexcenter">3</view>
+              </view>
+            </view>
+            <view class="flex1 flex flexcente he100 flexdc">
+              <view class="flex1_5 wd100 flexcenter ">
+                <view class="box-num flexcenter">2</view>
+              </view>
+              <view class="flex1 wd100 flexcenter brboxt">
+                <view class="box-num flexcenter">4</view>
+              </view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box8" wx-if="{{ selectLayout=='layout8'}}">
+            <view class="flex1 flexcenter he100 brboxl flexdc">
+              <view class="flex1 wd100 flexcenter ">
+                <view class="box-num flexcenter">1</view>
+              </view>
+              <view class="flex1 wd100 flexcenter brboxt">
+                <view class="box-num flexcenter">3</view>
+              </view>
+            </view>
+            <view class="flex1 flex flexcente he100 flexdc">
+              <view class="flex1 wd100 flexcenter ">
+                <view class="box-num flexcenter">2</view>
+              </view>
+              <view class="flex1 wd100 flexcenter brboxt">
+                <view class="box-num flexcenter">4</view>
+              </view>
+            </view>
+          </view>
+
+          <view class="layout-box flexcenter layout-box9" wx-if="{{ selectLayout=='layout9'}}">
+            <view class="flex2_3 flexcenter he100 brboxl">
+              <view class="box-num flexcenter">1</view>
+            </view>
+            <view class="flex1 flexcenter he100 flexdc">
+              <view class="flex1 flexcenter wd100">
+                <view class="box-num flexcenter">2</view>
+              </view>
+              <view class="flex1 flexcenter brboxt wd100">
+                <view class="box-num flexcenter">3</view>
+              </view>
+              <view class="flex1 flexcenter brboxt wd100">
+                <view class="box-num flexcenter">4</view>
+              </view>
+
+            </view>
+          </view>
+
+
+        </view>
+      </view>
+      <view class="tabli flex">
+        <view class="li flex1 flexcenter {{selectLayout=='layout1'?'bradd':''}}" bindtap="toggleLayout" data-type="layout1">布局一</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout2'?'bradd':''}}" bindtap="toggleLayout" data-type="layout2">布局二</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout3'?'bradd':''}}" bindtap="toggleLayout" data-type="layout3">布局三</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout4'?'bradd':''}}" bindtap="toggleLayout" data-type="layout4">布局四</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout5'?'bradd':''}}" bindtap="toggleLayout" data-type="layout5">布局五</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout6'?'bradd':''}}" bindtap="toggleLayout" data-type="layout6">布局六</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout7'?'bradd':''}}" bindtap="toggleLayout" data-type="layout7">布局七</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout8'?'bradd':''}}" bindtap="toggleLayout" data-type="layout8">布局八</view>
+        <view class="li flex1 flexcenter {{selectLayout=='layout9'?'bradd':''}}" bindtap="toggleLayout" data-type="layout9">布局九</view>
+      </view>
+    </view>
+
+    <view class="resource-lable flex flexjcsb mtli">
+      <view class="flex">
+        <view class="icon ibk flex flexac">
+          <view class="iconfont icon-bofang baseAct"></view>
+        </view>
+        <view class="desc ibk flex flexdc  flexacsb  flextc">
+          <view>
+            <view class="basefs32">视频源</view>
+            <view class="basefs30 c999">0个源</view>
+          </view>
+        </view>
+      </view>
+      <view class="flex flexdc flexac">
+        <view class="descBtn">详情</view>
+        <view class="iconfont icon-changyongtubiao-mianxing- baseAct ibk"></view>
+      </view>
+    </view>
+    <view class="resource-lable flex flexjcsb">
+      <view class="flex">
+        <view class="icon ibk flex flexac">
+          <view class="iconfont icon-weizhiquanxian baseAct"></view>
+        </view>
+        <view class="desc ibk flex flexdc  flexacsb flextc">
+          <view>
+            <view class="basefs32">位置</view>
+            <view class="basefs30 c999">0个源</view>
+          </view>
+        </view>
+      </view>
+      <view class="flex flexdc flexac">
+        <view class="descBtn">详情</view>
+        <view class="iconfont icon-changyongtubiao-mianxing- baseAct"></view>
+      </view>
+    </view>
+
+    <view class="lable-con label-time brb flex flexac mtli ">
+      <view class="iconfont icon-shijian baseAct"></view>
+      <view class="basefs32">时间设置</view>
+    </view>
+
+    <view class="lable-con label-repeat  brb flex  flexac">
+      <view class="rol1  basefs32  ">重复</view>
+      <view class="flex">
+        <radio-group class="radio-group flex flexac" name="a1">
+          <radio class="radio" checked="{{item.setWeek}}" catchtap="childrenRadio">
+          </radio>
+          <text class="basefs32">按周重复</text>
+          <radio class="radio" checked="{{item.setWeek}}" catchtap="childrenRadio">
+          </radio>
+          <text class="basefs32">指定日期</text>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="lable-con lable-common flex flexac">
+      <view class="title rol1  basefs32 ">
+        执行时间
+      </view>
+      <view class="val" bindtap="togglePicker">
+        <input type="text" placeholder="请选择时间" disabled value="{{audioVal.executetime}}"></input>
+      </view>
+    </view>
+
+    <view class="lable-con lable-common flex flexac">
+      <view class="title rol1  basefs32">
+        播放时长
+      </view>
+      <view class="val">
+        <input type="number" placeholder="请输入2800内的整数秒" value="{{audioVal.playtime}}"></input>
+      </view>
+    </view>
+
+
+    <view class="lable-con lable-common flex flexac selectweek">
+      <view class="title rol1  basefs32">
+        执行周期
+      </view>
+      <view class="val flex flexac" bindtap="toggleWeek">
+        <input wx:if="{{weekVal==''}}" type="text" disabled placeholder="请选择" value="{{weekVal}}"></input>
+        <view wx:if="{{weekVal!==''}}">{{weekVal}}</view>
+      </view>
+    </view>
+  </view>
+  <pickercol wx:if="{{pickercol}}" class="pickercol-zujian" bind:onPickerView="onPickerView"> </pickercol>
+  <week wx:if="{{isweek}}" bind:onWeek="onWeek" weekArr="{{weekArr}}"></week>
+
+  <view class="pageAddbtn flexcenter baseAct f36" bindtap="onAddtask">添加</view>
+
+</view>

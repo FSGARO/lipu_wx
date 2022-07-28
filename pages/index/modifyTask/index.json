@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "pickercol": "/components/pickercol/index",
+    "headtop": "/components/headtop/index",
+     "layout": "/components/layout/index",
+     "chooseLayout": "/components/chooseLayout/index",
+    "week": "/components/week/index",
+    "search":"/components/search/index",
+    "trees":"/components/trees/index",
+    "tree":"/components/tree/index"
+  }
+}

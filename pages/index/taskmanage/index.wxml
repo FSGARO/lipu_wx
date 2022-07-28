@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+	<!-- 头部 -->
+	<view class="fixedTop " id="taskpgTop">
+		<headtop title="任务管理"></headtop>
+		<!-- 搜索功能暂时不用 -->
+		<view class="seach-add flex flexjcsb">
+			<search title="按名称搜索" class="searchSolt grow" bind:onSearch="onSearch"></search>
+			<view class="addBtn clearfix" >
+				<view class="add tc clearfix "hover-class="activeBtn" bindtap="isAdd">
+				<view class="add_text left" >添加</view>
+				<view class="iconfont icon-xiala1 right add_xiala1"></view>
+				</view>
+				<view class="wulian_list "  hidden="{{!isAdd}}">
+				<view class="add_renwu" bindtap="addWulian"   hover-class="activeBtn"  >物联任务</view>
+				<view class="add_renwu "   bindtap="addTask" hover-class="activeBtn"  >多媒体任务</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 任务类型  -->
+	<view class="taskClass" style="margin-top:270rpx;">
+		<view class="allTaskbox clearfix ">
+			<view class="mode left  {{ mode?'active':''}} " bindtap="taskChange">物联任务</view>
+			<view class="mode left {{ mode?'':'active'}} " bindtap="taskChange">多媒体教学任务</view>
+			<view class="mode left  " bindtap="tasksort">
+				<span >排序</span>
+				<view class="iconfont icon-xiala1 right sort_xiala1"></view>
+			</view>
+		</view>
+	</view>
+	<view class="scroll-box fixedMain"  style="top:330rpx;">
+	<scroll-view scroll-y class="tasklist " id="task"       bindscrolltolower="bindDownLoad" bindscroll="scroll">
+		<view class="li" wx:for="{{mode?wulianList:tasklist}}" wx:key="id" data-index="{{index}}"  data-detail='{{item}}'    bindtouchstart="touchstartX" bindtap="resetX" bindtouchmove="touchmoveX" bindtouchend="touchendX" animation="{{currentIndex === index ?animation : ''}}">
+			<view  class="liCon_box"  hover-class="activeBtn" bindtap="taskDetails" data-detail='{{item}}'  data-index="{{index}}"  data-method="{{item.method}}" >
+			<view class="liCon clearfix ">
+				<view class="iconfont  left  {{mode?'icon-renwuzhongxin':'icon-bofang'}}"></view>
+				<view class="liItem-name "> {{ item.name}}</view>
+				<!-- <view class="liItem-able left"> {{ item.able}}</view> -->
+				<view class="liItem-time clearfix">
+					<view class="left"> {{ item.mode}}{{ item.prop}}</view>
+					<view class="iconfont icon-vertical_line left"></view>
+					<view class="left" wx:for="{{item.clock}}"   wx:for-item="items" wx:key='index' style="margin-right:10rpx">{{ items}}</view>
+				</view>
+			</view>
+
+			<!-- 详情按钮 -->
+			<view class="detailsBtn">
+				<view class="iconfont icon-zuohua"></view>
+			</view>
+		</view>
+			<view class="operation_modify  operation" data-deviceid="{{item.device_id}}"  catchtap="modifyItem"   data-detail='{{item}}' data-method="{{item.method}}" hover-class="activeBtn">
+        <view class="modify"  >修改</view>
+			</view>
+			<view class="operation_disable  operation" data-deviceid="{{item.id}}"  data-index="{{index}}" catchtap="disableItem"  hover-class="activeBtn" wx:if="{{item.enabled}}"  data-disable="deactive">
+        <view class="  disable "  >禁用</view>
+			</view>
+			<view class="operation_disable  operation opendisable" data-deviceid="{{item.id}}"  data-index="{{index}}" catchtap="disableItem"  hover-class="activeBtn"   wx:if="{{!item.enabled}}" data-disable="active">
+        <view class=" opendisable "  >开启</view>
+			</view>
+			<view class="operation_delete  operation" data-deviceid="{{item.id}}" catchtap="deleteItem"  data-index="{{index}}" hover-class="activeBtn">
+        <view class="delete" >删除</view>
+      </view>
+		</view>
+
+	</scroll-view>
+	</view>
+
+	<view class="con grow prelative none">
+		<view class="nulldata tc">
+			<image mode="widthFix" src="../../../img/nulldata.png"></image>
+			<view class="tip">暂无数据</view>
+		</view>
+	</view>
+</view>

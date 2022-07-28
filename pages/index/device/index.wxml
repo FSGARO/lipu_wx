@@ -1,0 +1,111 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+	<view class="fixedTop topBox" id="deviceTop">
+		<view class="topBox">
+			<headtop title="设备列表"></headtop>
+			<!-- <search title="按位置搜索" class="searchSolt" bind:onSearch="onSearch"></search> -->
+
+			<!-- 开关控制按钮 -->
+			<!-- <view class="top-btn-box">
+			<view class=" top-btn  {{ item.check?'dengactive':''}} "  hover-class="activeBtn" bindtap="changeBatch" data-method="{{item.method}}" data-index="{{ index }}"
+				wx:for="{{batchCheck}}" wx:key="index">
+				<view class="icon icon-box ">
+					<view class="iconfont {{item.icon}}"></view>
+					<view class="top-btn-name">{{item.name}} ({{item.check?'开':'关'}})</view>
+				</view>
+				
+			</view>
+		</view> -->
+
+
+
+		</view>
+		<view class="thead flex clearfix ">
+			<view class="title">
+				<radio-group bindtap="theadRadio">
+					<radio value="all" checked="{{radioCheck}}" />全选
+				</radio-group>
+				<view class=" control_box_four"></view>
+			</view>
+
+			<view class="mode left  " bindtap="tasksort" hover-class="activeBtn">
+				<span class="sort_text">排序</span>
+				<view class="sort_icon">
+				<view class="iconfont icon-shang right sort_shang  {{shang?'shang_active':''}}"></view>
+
+				<view class="iconfont icon-xiala1 right sort_shang  {{shang?'':'shang_active'}}"></view>
+			</view>
+			</view>
+			
+			<view class="middleLine"></view>
+			<view class="text grow tr">
+
+				<view wx-if="{{ radioBatch }}" class="ibk batch" bindtap="batchControl">批量控制</view>
+				<!-- <view wx-if="{{ !radioBatch }}" class="ibk batch" bindtap="goAdddevice">添加设备</view> -->
+			</view>
+
+
+		</view>
+	</view>
+	<scroll-view scroll-y class="con main fixedMain device_scroll" bindscroll="scroll" bindscrolltolower="bindDownLoad">
+		<view class="device_scroll_box">
+			<view class="li flex plr40 brb  {{item.online?'on':''}}" wx:for="{{deviceList}}" wx:for-index="index" wx:key="id"
+				data-index="{{index}}" bindtouchstart="touchstartX" bindtap="resetX" bindtouchmove="touchmoveX"
+				bindtouchend="touchendX" animation="{{currentIndex === index ?animation : ''}}">
+				<view bindtap="goClassrom" class="{{item.online?'liCon_box':'unliCon_box'}}" hover-class="activeBtn"
+					data-deviceId="{{item.id}}" data-index="{{index}}" data-online="{{item.online}}"
+					data-school="{{ item.place}}"  data-ext_info="{{ item.ext_info}}">
+					<view class="title flex flexac">
+						<radio-group catchtap="changeTheadradio" data-type="{{index}}" data-id ="{{ item.id}}">
+							<radio value="all" checked="{{item.check}}" disabled="{{!item.online}}" />
+							<view class="num ibk">{{index+1}}</view>
+						</radio-group>
+					</view>
+
+					<view class="grow device-seat  flexdc ">
+						<view class="flex flexjcfe  deviceIcon">{{item.place}}</view>
+						<view class="icon flex flexjcfe deviceIcon">
+							<view class="iconfont icon-weibiaoti--1 {{ item.status.system_enabled?'iconBox':''}}"></view>
+							<view class="iconfont icon-diannao {{ item.status.power_screen_down?'iconBox':''}}"></view>
+							<view class="iconfont icon-typecar117 {{ item.status.system_enabled?'iconBox':''}}"></view>
+							<view class="iconfont icon-touyingyi1 {{ item.status.enabled_projector?'iconBox':''}}"></view>
+						</view>
+					</view>
+					<!-- 详情按钮 -->
+					<view class="detailsBtn">
+						<view class="iconfont icon-zuohua"></view>
+					</view>
+				</view>
+				<!-- 删除按钮 -->
+				<view class="operation_delete operation" data-deviceid="{{item.id}}" catchtap="deleteItem"
+					data-index="{{index}}" hover-class="activeBtn">
+					<view class="modifys">删除</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view class="controlModel" wx:if="{{controlModel}}">
+		<view class="model" bindtap="batchControl"></view>
+		<view class="batchControl batchControl-box">
+			<view class="title">批量控制</view>
+			<view class="conWrap">
+				<view class="con"> 
+					<!-- 开关控制按钮 -->
+			 <view class="btn-box " bindtap="changeBatch" data-method="{{item.method}}" data-index="{{ index }}"
+						wx:for="{{batchCheck}}" wx:key="index">
+						<view class="icon icon-box {{ item.check?'dengactive':''}}">
+							<view class="iconfont {{item.icon}}"></view>
+						</view>
+						<view>{{item.name}} ({{item.check?'开':'关'}})</view>
+					</view>
+
+				</view>
+			</view>
+			<view class="close flexcenter" bindtap="batchControl">
+				<view class="iconfont  icon-guanbi1  ibk"></view>
+			</view>
+
+		</view>
+	</view>
+
+</view>

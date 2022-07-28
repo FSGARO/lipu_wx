@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+  <view class="topBox">
+    <headtop title="直播"></headtop>
+  </view>
+  <view class="livePlayer">
+
+    <live-player wx:if="{{!isFullScreen}}" class="video nofullScreen" id="liveplayer" bindtap="setFullscreen" src="{{liveInfo.payload.rtmp_url.url}}" mode="RTC" orientation="vertical" object-fit="contain" autoplay bindstatechange="statechange"
+      binderror="error" />
+
+    <live-player wx:if="{{isFullScreen}}" class="video fullScreen" id="liveplayer" bindtap="setFullscreen" src="{{liveInfo.payload.rtmp_url.url}}" mode="RTC" orientation="horizontal" object-fit="contain" autoplay bindstatechange="statechange" binderror="error" 
+    />  
+
+  </view>
+</view>

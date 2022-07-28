@@ -1,0 +1,7 @@
+<!--index.wxml-->
+  <view class="seach prelative" id="seachId">
+         <input placeholder="{{title}}" placeholder-class="searchplaceholder" confirm-type="search" bindconfirm="goSearch" value="{{searchVal}}"/>
+        <view class="searchIcon iconfont icon-sousuo ibk"></view>
+        <view class="closeIcon iconfont icon-guanbi ibk" bindtap="empty"></view>
+      </view>
+ 

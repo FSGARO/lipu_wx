@@ -1,0 +1,69 @@
+.searchSolt .seach{
+  width: 90%;
+  margin: 20rpx auto;
+}
+
+.thead{
+  height: 106rpx;
+  line-height: 106rpx;
+  background-color: var(--theadbg);
+  color: var(--cfff);
+}
+
+
+.thead .title{
+  width: 200rpx;
+  border-right-width: 2rpx;
+  border-right-style: solid;
+  border-right-color: #ccc;
+}
+
+.num{
+  width: 55rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--bglabel);
+  color: var(--cfff);
+
+}
+.con .li .title{
+  width: 200rpx;
+}
+.con .li{
+  height: 130rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.icon image{
+  width: 60rpx;
+}
+
+.livePlayer .video{
+  height: 450rpx;
+}
+
+ 
+.nofullScreen{
+  width: 100%;
+}
+
+.fullScreen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+.offInfo{
+  padding: 6rpx 0;
+  width: 170rpx;
+  border-radius: 35rpx;
+  margin: 5rpx 0 20rpx 60rpx;  
+}
+
+.offInfo{
+  background-color: #74c4fc;
+}

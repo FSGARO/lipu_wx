@@ -1,0 +1,15 @@
+<view class="taskmanage flex flexdc">
+  <view class="topbox">
+    <headtop title="添加物联任务"></headtop>
+  </view>
+   <addcontrol bind:onAddtask="onAddtask"></addcontrol>
+   </view>
+  <!-- <addcontrol bind:onAddtask="onAddtask"></addcontrol>
+  <timecontrol  bind:onAddtask="onAddtask" weekArr="{{weekArr}}" > </timecontrol>
+</view>
+
+<!-- <view class="picker">
+<picker   class="pickerBox" mode='time' bindchange="pickerValue" value="" >
+  <view>111</view>
+</picker>
+</view> -->

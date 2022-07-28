@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "addcontrol": "/components/addcontrol/index" 
+  }
+}

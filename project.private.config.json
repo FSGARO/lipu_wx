@@ -1,0 +1,271 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "登录页面",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "消息",
+          "pathName": "pages/news/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "公共顶部",
+          "pathName": "pages/components/headTop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "消息中心内页",
+          "pathName": "pages/news/center/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "紧急广播",
+          "pathName": "pages/news/broadcast/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "主页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "任务管理",
+          "pathName": "pages/index/taskmanage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "直播列表",
+          "pathName": "pages/index/patrol/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "设备列表",
+          "pathName": "pages/index/device/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "教学楼",
+          "pathName": "pages/index/classroom/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "开关详情",
+          "pathName": "pages/index/offdetails/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "直播页面",
+          "pathName": "pages/index/live/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 13,
+          "name": "任务详情",
+          "pathName": "pages/index/taskdetails/index",
+          "query": "detailId = 180",
+          "scene": null
+        },
+        {
+          "id": 14,
+          "name": "pages/index/addWulian/index",
+          "pathName": "pages/index/addWulian/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "位置选择",
+          "pathName": "pages/news/siteselect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "控制组件",
+          "pathName": "components/addcontrol/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "预约教室",
+          "pathName": "pages/index/appointment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "预约信息",
+          "pathName": "pages/index/appointmentInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 19,
+          "name": "添加设备",
+          "pathName": "pages/auth/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "编辑信息",
+          "pathName": "pages/news/editinfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "修改密码",
+          "pathName": "pages/my/changepwd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "选择学校",
+          "pathName": "pages/my/chooseschool/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "关于我们",
+          "pathName": "pages/my/aboutme/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "服务消息",
+          "pathName": "pages/news/service/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我要预约",
+          "pathName": "pages/index/appointmentInfo/makeappoint/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "预约信息",
+          "pathName": "pages/index/appointmentInfo/makeappoint/reservation/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "宣传片",
+          "pathName": "pages/index/trailer/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "能耗统计",
+          "pathName": "pages/index/energy/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 29,
+          "name": "小样",
+          "pathName": "pages/index/demo/demo",
+          "query": "deviceid  = 109451",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "选择学校",
+          "pathName": "pages/index/chooseSchool/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 31,
+          "name": "pages/index/taskdetails/index",
+          "pathName": "pages/index/taskdetails/index",
+          "query": "detailId=180&method=1",
+          "scene": null
+        },
+        {
+          "name": "预约教室列表",
+          "pathName": "pages/index/appointment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "预约教室信息",
+          "pathName": "pages/index/appointmentInfo/index",
+          "query": "classroomId=1504271736240160778&classroomaddress=010102",
+          "scene": null
+        },
+        {
+          "name": "按周预约",
+          "pathName": "pages/index/appointmentInfo/makeappoint/index",
+          "query": "classroomId=1505753314870976521&dates=2022-3-21",
+          "scene": null
+        },
+        {
+          "name": "login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "预约教室",
+          "pathName": "pages/index/appointmentInfo/index",
+          "query": "classroomId=1531911453399842817&classroomaddress=%E5%8D%81%E6%95%99%E5%8C%97101",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

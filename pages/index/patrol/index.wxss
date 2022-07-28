@@ -1,0 +1,169 @@
+ .nofullScreen {
+   width: 100%;
+ }
+
+ .fullScreen {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100% !important;
+   height: 100% !important;
+ }
+
+ .live_name {
+   font-size: 36rpx;
+   color: #333;
+   padding: 20rpx 16rpx 10rpx 16rpx;
+ }
+
+ .conwrap .live_forward {
+   z-index: 999;
+   position: absolute;
+   width: 100%;
+   text-align: center;
+   top: 50%;
+ }
+
+ .livePlayer {
+   position: relative;
+   width: 100vw;
+   box-sizing: border-box;
+
+ }
+
+ .conwrap {
+   overflow: hidden;
+ }
+
+ .fullonwrap {
+   width: 100%;
+   height: 100vh;
+   /* border: 1rpx solid red; */
+ }
+
+ .ctral_bofang {
+   width: 100%;
+   height: 80rpx;
+   position: absolute;
+   bottom: 0;
+   box-sizing: border-box;
+   z-index: 999;
+ }
+
+ .FullBofang {
+   width: 60rpx;
+   height: 80vh;
+   left: 10rpx;
+   padding: 10rpx;
+   box-sizing: border-box;
+   z-index: 1000;
+   position: relative;
+   top: 5vh;
+ }
+
+ .top0 {
+   margin-top: 0rpx;
+   position: absolute;
+ }
+
+ .top200 {
+   margin-top: 200rpx;
+ }
+
+ .allScreen {
+   height: 100vh;
+ }
+
+ .all {
+   width: 100%;
+   box-sizing: border-box;
+   /* height: 100%; */
+   overflow: hidden;
+
+ }
+
+ .patro-box {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+ }
+
+ .scroll-lock {
+   height: 100vh;
+   overflow: hidden;
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   top: 0;
+ }
+
+ .iconfont {
+   padding: 10rpx;
+   font-size: 40rpx;
+   line-height: 60rpx;
+
+ }
+
+ .bottom {
+   position: absolute;
+   bottom: 0px;
+ }
+
+ .video {
+   background-color: #fff !important;
+ }
+ .img-box{
+   position: absolute;
+   z-index: 9;
+   height: 225px;
+   overflow: hidden;
+   text-align: center;
+   width: 100vw;
+transform: rotate();
+ }
+ .img-box image{
+  width: 100vw;
+  height: 225px;
+ }
+ .full-img-box{
+   position: absolute;
+   z-index: 9;
+   height: 100vh;
+   width:100vw ;
+   overflow: hidden;
+   text-align: center;
+   /* background: red; */
+   top:120rpx;
+   left:0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+ overflow: hidden;
+ background-size:cover;
+ }
+ .full-img-box image{
+  width: 100vh;
+  height: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+ }
+
+ .bofang-box{
+   display: inline-block;
+   /* line-height: 225px; */
+   position: absolute;
+   left: calc(50% - 50rpx);
+   top:calc(50% - 50rpx);
+   border-radius: 50%;
+   background-color: #fff;
+   opacity: 0.6;
+   width: 100rpx;
+   height: 100rpx;
+   text-align: center;
+   line-height: 100rpx;
+
+ }

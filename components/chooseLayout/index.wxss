@@ -1,0 +1,43 @@
+@import '../../utils/addaudio.wxss';
+.tabcon .text {
+  width: 330rpx;
+  padding-bottom: 10rpx;
+}
+.tabli{
+  width: 100%;
+  height: 80rpx;
+  font-size: 26rpx;
+  background-color: #f2f2f2;
+}
+
+.layout-box{
+  width: 330rpx;
+  height: 220rpx; 
+  border-radius: 20rpx; 
+  border: 4rpx solid #04b102; 
+  overflow: hidden;
+}
+
+.box-num{
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid #666;
+  border-radius: 50%;
+  font-size: 26rpx;
+}
+
+.layout .tabcon{
+  background-color: var(--cfff);
+  padding: 10rpx 0;
+  padding-right: 20rpx;
+}
+.onchoose{
+  background: #26da23;
+
+}
+.gao1{
+  flex: 0.6;
+ }
+ .gao3{
+   flex:0.4;
+ }

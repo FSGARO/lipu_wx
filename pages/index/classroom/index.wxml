@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<view class="taskmanage flex flexdc">
+  <view class="topBox">
+    <headtop title="教学楼"></headtop>
+    <view class="liveBtn flex flexjcsb">
+      <view class="offInfo cfff tc flexcenter" bindtap="goOffDetails">
+        <view class="iconfont icon-htmal5icon28"></view>
+        <view>详情</view>
+      </view>
+      <view class="liveInfo cfff tc flexcenter" bindtap="goLive">
+        <view class="iconfont icon-bofang1"></view>
+        直播
+      </view>
+    </view>
+  </view>
+  <view class="con">
+    <view class="devicebox flex">
+      <view class="box flexcenter flexdc  tc cfff setBox {{switchCheck?'switch':''}}" bindtap="mainSwitch" data-name="total">
+        <view class="iconfont icon-weibiaoti--1"></view>
+        <text>总开关</text>
+      </view>
+      <view class="box flexcenter flexdc tc cfff setBox {{computerCheck?'computer':''}}" bindtap="mainSwitch" data-name="computer">
+        <view class="iconfont icon-diannao-tianchong"></view>
+        <text>电脑</text>
+      </view>
+      <view class="box flexcenter flexdc  tc cfff setBox {{lightingCheck?'lighting':''}}" bindtap="mainSwitch" data-name="lighting">
+        <view class="iconfont icon-typecar117"></view>
+        <text>灯光</text>
+      </view>
+      <view class="box flexcenter flexdc  tc cfff setBox {{seatCheck?'seat':''}}" bindtap="mainSwitch" data-name="seat">
+        <view class="iconfont icon-weizhiquanxian"></view>
+        <text>本地锁定</text>
+      </view>
+    </view>
+    <view class="devicebox-li li flex">
+      <!-- instrument -->
+      <view class="instrument tc flexcenter flexdc cfff setBox {{projectorCheck?'projector':'' }}" bindtap="mainSwitch" data-name="projector">
+        <view class="iconfont icon-touyingyi1"></view>
+        <text>投影仪</text>
+      </view>
+      <view class="offSet grow">
+        <radio-group class="radio-group flexwrap" bindchange="signalChange">
+          <label class="radio" wx:for="{{off.projector.offGroup}}">
+            <radio disabled="{{!projectorCheck}}"  value="{{index}}"  checked="{{item.checked}}" />{{item.name}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="title">
+      输出信号源切换
+    </view>
+    <view class="devicebox-li li flex">
+      <view class="instrument tc setBox  flexcenter flexdc signal">
+        <view class="iconfont icon-dianziyiqi"></view>
+        <text>投影仪-主</text>
+      </view>
+      <view class="offSet grow ">
+        <radio-group class="radio-group flexwrap" bindchange="mainChange">
+          <label class="radio" wx:for="{{off.signalMain.offGroup}}" wx:for-index="index">
+            <radio checked="{{item.checked}}" value="{{index}}"/>{{item.name}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="devicebox-li li flex">
+      <view class="instrument tc setBox  flexcenter flexdc signal">
+        <view class="iconfont icon-dianziyiqi"></view>
+        <text>显示器-辅</text>
+      </view>
+      <view class="offSet grow ">
+        <radio-group class="radio-group flexwrap" bindchange="assistChange">
+          <label class="radio" wx:for="{{off.signalAssist.offGroup}}">
+            <radio checked="{{item.checked}}" value="{{index}}"/>{{item.name}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+
+    <view class="title-null"></view>
+    <view class="volume">
+      <view class="lable flex flexac">
+        <view class="ibk">麦克</view>
+        <view class="iconfont icon-xianxingtubiao_huabanfuben baseAct "></view>
+        <slider class="slider ibk" bindchange="makechange" step="5" value="{{mikeval}}" max="100"  />
+        <view class="ibk">{{mikeval}}</view>
+      </view>
+      <view class="lable flex flexac">
+        <view class="ibk">音响</view>
+        <view class="iconfont icon-yinxiang baseAct "></view>
+        <slider class="slider ibk" bindchange="klangchange" step="5" value="{{soundVal}}" max="100" />
+        <view class="ibk">{{soundVal}}</view>
+      </view>
+    </view>
+  </view>
+</view>

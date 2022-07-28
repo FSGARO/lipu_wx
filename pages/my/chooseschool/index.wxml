@@ -1,0 +1,30 @@
+<headtop title="选择学校"></headtop>
+<view class="container">
+  <view class="list">
+    <view class="li flex brb flexcenter line " wx:for="{{schoolList}}"  data-index="{{index}}"   wx:key="device_name" bindtouchstart="touchstartX" bindtap="resetX" bindtouchmove="touchmoveX" bindtouchend="touchendX" animation="{{currentIndex === index ?animation : ''}}">
+    <view class="mes clearfix">
+      <view class="icon left  {{item.online?'yesline':'Noonline'}}  "   bindtap="addDevice" style="border-radius: 8px;">
+      <view class="iconfont icon-xuexiao"></view>
+        <!-- <image mode="widthFix" src="../../../img/update.png"></image> -->
+      </view>
+      <view class="grow lableText left list_item">
+        <view class="wd100">{{item.device_name}}</view>
+        <view class="left ">{{item.online?'在线':'离线'}}</view>
+        <view wx:if="{{item.currentOnline}}" class="left currentOnline ">正处于当前学校</view>
+      </view>
+      <view class="btn  right">
+      <button class="{{item.online?'noline':'Unonline'}}  " type="primary" size="mini" catchtap="connectSchool" data-online="{{item.online}}" data-deviceid="{{item.device_id}}"> 进入 </button>
+    </view>
+    </view>
+
+      <view class="operation" data-deviceid="{{item.device_id}}" catchtap="deleteItem">
+        <view class="delete"  >删除</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+ 

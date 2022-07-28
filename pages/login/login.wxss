@@ -1,0 +1,15 @@
+page {
+  position: relative;
+}
+
+page .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+page .container view {
+  width: 375rpx;
+  margin: 20rpx 0;
+}

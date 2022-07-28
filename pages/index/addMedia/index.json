@@ -1,0 +1,12 @@
+{
+  
+  "usingComponents": {
+   
+    "timecontrol": "/components/timecontrol/index",
+    "addMedia": "/components/addMedia/index",
+    "search": "/components/search/index",
+    "pickercol": "/components/pickercol/index",
+    "addaudio": "/components/addaudio/index",
+    "addvideo": "/components/addvideo/index"
+  }
+}

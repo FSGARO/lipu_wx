@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="news flex flexdc">
+  <view class="">
+    <headtop title="设备消息"></headtop>
+    <view class="tabtop flex">
+      <view class="grow flex">
+        <view class="flex1 tc tab flexcenter">
+          <picker class="ibk" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker basefs">
+              {{array[index]}}
+            </view>
+          </picker>
+          <view class="pulldown iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></view>
+
+        </view>
+        <view class="empty flex1 tc tab flexcenter" bindtap="goEmpty">
+          <view class="iconfont icon-shanchu"></view>
+          <view class="basefs">清空消息</view>
+        </view>
+      </view>
+      <view class="publish tc tab flexcenter" bindtap="goPulish">
+        <view class="iconfont icon-fabu1"></view>
+        <view class="basefs">发布</view>
+      </view>
+    </view>
+  </view>
+  <view class="con grow prelative">
+    <view class="nulldata tc">
+      <image mode="widthFix" src="../../../img/nulldata.png"></image>
+      <view class="tip">暂无数据</view>
+    </view>
+  </view>
+
+
+
+
+
+</view>

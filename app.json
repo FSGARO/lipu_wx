@@ -1,0 +1,75 @@
+{
+	"pages": [
+		"pages/login/login",
+		"pages/my/chooseschool/index",
+		"pages/index/index",
+		"pages/auth/index",
+		"pages/index/taskmanage/index",
+		"pages/index/patrol/index",
+		"pages/index/device/index",
+		"pages/index/classroom/index",
+		"pages/index/demo/demo",
+		"pages/index/offdetails/index",
+		"pages/index/taskdetails/index",
+		"pages/index/appointment/index",
+		"pages/index/addtask/index",
+		"pages/index/appointmentInfo/index",
+		"pages/index/live/index",
+		"pages/news/index",
+		"pages/my/index",
+		"pages/news/center/index",
+		"pages/news/siteselect/index",
+		"pages/news/editinfo/index",
+		"pages/news/broadcast/index",
+		"pages/news/service/index",
+		"pages/news/device/index",
+		"components/addcontrol/index",
+		"pages/my/changepwd/index",
+		"pages/my/aboutme/index",
+		"pages/index/appointmentInfo/makeappoint/index",
+		"pages/index/appointmentInfo/makeappoint/reservation/index",
+		"pages/index/trailer/index",
+		"pages/index/energy/index",
+		"pages/index/patrol/patroldetail/index",
+		"pages/my/chooseschool/adddevice/index",
+		"pages/index/addWulian/index",
+		"pages/index/addMedia/index",
+		"pages/index/record/index",
+		"pages/index/modifyTask/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom",
+		"navigationBarTitleText": "下拉刷新",
+		"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#36a9fb",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"selectedIconPath": "img/tabBar/applyactive.png",
+				"iconPath": "img/tabBar/apply.png",
+				"pagePath": "pages/index/index",
+				"text": "应用"
+			},
+			{
+				"selectedIconPath": "img/tabBar/msgactive.png",
+				"iconPath": "img/tabBar/msg.png",
+				"pagePath": "pages/news/index",
+				"text": "消息"
+			},
+			{
+				"selectedIconPath": "img/tabBar/myactive.png",
+				"iconPath": "img/tabBar/my.png",
+				"pagePath": "pages/my/index",
+				"text": "我的"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
+}

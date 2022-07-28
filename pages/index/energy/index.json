@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "headtop": "/components/headtop/index",
+    "search": "/components/search/index"
+ 
+  }
+}

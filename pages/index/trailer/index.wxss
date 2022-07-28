@@ -1,0 +1,74 @@
+.xctent {
+  /* color: black;
+  font-weight: 600; */
+  padding: 20rpx;
+}
+
+.ztbj{
+  margin-left: 40rpx;
+}
+
+.video {
+  width: 100%;
+  position: relative;
+}
+
+.fens {
+  text-align: right;
+  margin: 20rpx 10rpx 0 0;
+}
+
+.myVideo {
+  width: 100%;
+  background-color: #fff;
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  margin-top: -300rpx;
+  margin-left: -80rpx;
+}
+
+button {
+  padding: 0 1em !important;
+  border-radius: 40rpx;
+}
+
+.coverBg, .stopBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.coverBg {
+  z-index: 11;
+}
+
+.stopBg {
+  z-index: 12;
+}
+
+.stopBg .stopbtn{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.tel{
+  margin: 60rpx 0 0 20rpx;
+}

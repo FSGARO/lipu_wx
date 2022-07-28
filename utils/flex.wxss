@@ -1,0 +1,80 @@
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+.flex1_5{
+  flex: 1.5;
+}
+.flex2_3{
+  flex: 2.3;
+}
+.grow {
+  flex-grow: 1;
+}
+
+/* 拆行 */
+
+.flexwrap {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flexdr {
+  flex-direction: row;
+}
+
+.flexdc {
+  flex-direction: column;
+}
+
+.flexac {
+  align-items: center;
+}
+
+.flextc {
+  justify-content: center;
+}
+
+.flexjcsb {
+  justify-content: space-between;
+}
+
+.flexjcfs {
+  justify-content: flex-start;
+}
+
+.flexjcsa {
+  justify-content: space-around;
+}
+
+.flexjcfe {
+  justify-content: flex-end;
+}
+
+.flexacsb {
+  align-content: space-between;
+}
+
+.flexaife {
+  align-items: flex-end;
+}
+
+.flexaifs {
+  align-items: flex-start;
+}
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prelative {
+  position: relative;
+}

@@ -1,0 +1,21 @@
+<view class="wrap">
+  <view class="model" bindtap="pickerView" data-type="cancel"></view>
+  <view class="pickerView">
+    <view class="btnRow flex flexjcsb">
+      <view class="close" bindtap="pickerView" data-type="cancel">取消</view>
+      <view class="define" bindtap="pickerView" data-type="define">确定</view>
+    </view>
+    <picker-view class="con" indicator-style="height: 50px;" style="width: 100%; " value="{{pickervalue}}" bindchange="bindChange">
+      <picker-view-column>
+        <view class="flexcenter" wx:for="{{col1}}" style="line-height: 50px">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view class="flexcenter" wx:for="{{col2}}" style="line-height: 50px">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view class="flexcenter" wx:for="{{col3}}" style="line-height: 50px">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+
+  </view>
+</view>

@@ -1,0 +1,63 @@
+/**index.wxss**/
+.logo{
+  padding: 180rpx 0 70rpx;
+}
+.logo image{
+  width: 350rpx;
+}
+.bgfff{
+  background-color: var(--cfff)
+}
+
+.yzm-get{
+  width: 180rpx;
+  background-color: var(--bglabel);
+  color: #fff;
+  height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 30rpx;
+}
+
+ .yzm-num,.phone input{
+  height: 80rpx;
+  border-radius: 30rpx;
+  background-color: var(--cfff);
+  border: 2rpx solid #ccc;
+  /* text-indent: 70rpx; */
+  padding-left: 70rpx;
+  box-sizing: border-box;
+}
+
+.yzm-num{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tl{
+  margin-top: 70rpx;
+}
+.yzm-num input{ 
+  width: 100%;
+  height: 100%;
+}
+.verify-icon,.phone-icon{
+  width: 40rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+ 
+ .inputClass {
+       font-size: 32rpx;
+}
+
+.yzm{
+  margin-top: 40rpx;
+}
+ 
+.tip::after{
+  content: "*";
+  color: red;
+}

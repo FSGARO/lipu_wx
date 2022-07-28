@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="container" wx:if="{{phone_req}}">
+  <view>
+    <button open-type="getPhoneNumber" type="primary" bindgetphonenumber="getPhoneNumber">
+      获取手机号码
+    </button>
+  </view>
+  <view>
+    <button class="default" size="default" type="warn" bindtap="goSchool">取消</button>
+  </view>
+</view>

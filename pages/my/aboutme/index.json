@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "headtop": "/components/headtop/index",
+    "trees":"/components/trees/index"
+  }
+}

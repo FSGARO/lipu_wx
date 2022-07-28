@@ -1,0 +1,367 @@
+.page{
+  background: rgb(184, 126, 126);
+}
+.taskmanage {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.seach-add {
+  padding: 0rpx 30rpx 20rpx;
+  /* background-color: var(--bglabel); */
+  background:linear-gradient(#8daadb,#609afd);
+}
+
+.search, .close {
+  width: 40rpx;
+}
+.close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30rpx;
+  margin: auto;
+}
+
+.searchplaceholder {
+  color: var(--cfff);
+  padding-left: 50rpx;
+}
+
+.searchSolt .seach, .add {
+  border-radius: 40rpx;
+}
+
+.searchSolt .seach, .add, .searchSolt .seach input {
+  height: 62rpx;
+}
+
+.searchSolt .seach {
+  width: 93%;
+  padding-left: 80rpx;
+  background-color: #7fc8fd;
+  box-sizing: border-box;
+}
+
+.add {
+  height: 62rpx;
+  line-height: 62rpx;
+  width: 180rpx;
+  background-color: var(--addbtnbg);
+  color: var(--cfff);
+}
+
+.con {
+  margin-top: 30rpx;
+}
+
+.nulldata image {
+  width: 120rpx;
+}
+
+.nulldata {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 230rpx;
+  transform: translateY(-100rpx);
+}
+
+.nulldata .tip {
+  margin-top: 50rpx;
+}
+
+.selecttask {
+  height: 115rpx;
+  line-height: 115rpx;
+  background-color: var(--cfff);
+}
+
+.downArrow {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(90deg);
+}
+#task{
+  top:60rpx;
+  height: calc( 100vh - 360rpx);
+}
+
+.tasklist .userimg {
+  width: 130rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tasklist .userimg image {
+  width: 100%;
+}
+
+.qipao {
+  width: 60rpx;
+}
+
+.qipaoWrap {
+  width: 130rpx;
+}
+
+.tasklist .li {
+  margin:30rpx 20rpx;
+  height: 120rpx;
+  width: calc( 100% + 320rpx);
+  /* background-color: rgb(198, 214, 250); */
+  border-bottom:1rpx solid  rgb(198, 214, 250);
+  font-size: 28rpx;
+  z-index: 99;
+  position: relative;
+  overflow: hidden;
+  padding:10rpx 20rpx;
+}
+.liCon{
+  margin-right:30rpx;
+  position: relative;
+}
+.detailsBtn{
+  position: absolute;
+  right: 40rpx;
+ line-height: 140rpx;
+ color: #222;
+ top: 0rpx;
+}
+.detailsBtn .icon-zuohua{
+  font-size: 44rpx;
+}
+/* .liItem{
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  overflow: hidden;
+} */
+.liItem-name{
+  color: #333;
+  font-size: 34rpx;
+  position: absolute;
+  left: 130rpx;
+  top:20rpx;
+  line-height: 40rpx;
+}
+.liItem-time{
+  line-height: 50rpx;
+  position: absolute;
+  left: 130rpx;
+  top:60rpx;
+  font-size: 30rpx;
+  width: 500rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.icon-vertical_line{
+  font-size: 40rpx;
+}
+.icon-renwuzhongxin, .icon-bofang{
+  font-size: 60rpx;
+  color: #fff;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: linear-gradient(#d390ff,#daacf8);
+  text-align: center;
+  line-height: 100rpx;
+  margin-top:10rpx;
+}
+.icon-bofang{
+  background: linear-gradient(#929cfa,#bfc5fd);
+
+}
+
+.morewrap {
+  width: 56rpx;
+  height: 38rpx;
+  background-color: var(--morebg);
+  border-radius: 6rpx;
+}
+.classify{
+  margin:30rpx 10rpx;
+  height: 70rpx;
+  width: scal( 100% - 20rpx);
+  /* background:linear-gradient(#a8c2fa, #98b7fc); */ 
+  /* background-color: rgb(222, 230, 247); */
+  font-size: 28rpx;
+  z-index: 99;
+  position: relative;
+  box-sizing:border-box;
+  /* background: linear-gradient(to bottom, #afddf3 0%,#d7ecf7 100%); */
+  border-radius: 5px;
+  /* border-bottom: 2px solid #2b8bc6; */
+}
+.classify-box {
+margin-right:30rpx;
+display: flex;
+justify-content: space-around;
+}
+.classifyItem {
+  line-height: 70rpx;
+  width: 240rpx;
+  text-align: center;
+
+
+}
+.classifyItem:hover{
+  background-color: #fff;
+  border-radius: 5px;
+
+}
+.active{
+  background-color: #fff;
+}
+.taskClass{
+  height: 80rpx;
+  position: fixed;
+  z-index: 1111;
+}
+.allTaskbox{
+  width: 100%;
+  font-size:28rpx;
+  text-align: center;
+  height: 60rpx;
+margin-top: 30rpx;
+  margin:0 20rpx;
+  box-sizing: border-box;
+}
+.allTaskbox .mode{
+  line-height:60rpx;
+  margin:2rpx 8rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(rgb(240, 237, 237),rgb(184, 182, 182));
+  border-bottom: 4rpx solid rgb(114, 112, 112);
+}
+.allTaskbox .mode.active{
+  background:linear-gradient( #7aa6f1,#4785f0);
+  color: #fff;
+  font-size: 32rpx;
+  border-bottom: 4rpx solid #145ddb;
+}
+.add_xiala1{
+  font-size: 30rpx;
+  color: rgb(71, 69, 69);
+ width: 40rpx;
+ height: 62rpx;
+ line-height: 62rpx;
+ padding-right: 20rpx;
+}
+.sort_xiala1{
+  font-size: 30rpx;
+  color: rgb(71, 69, 69);
+ height: 62rpx;
+ line-height: 62rpx;
+
+}
+.add_text{
+  width: 120rpx;
+}
+.addBtn {
+  position: relative;
+}
+.addBtn .wulian_list{
+  position: absolute;
+  top: 64rpx;
+  right: 0rpx;
+  width: 180rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+/* .add_renwu{
+  line-height: 40rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  padding:6rpx 0rpx;
+  background: #659cf9;
+  color: #fff;
+} */
+.add_renwu{
+  line-height: 60rpx;
+  margin: 6rpx 0rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  background: linear-gradient( #4a15c5,#6553b6);
+  color: #fff;
+  font-size: 32rpx;
+  border-bottom: 4rpx solid #5d17e0;
+}
+/* .add_renwu:hover {
+  background: linear-gradient(rgb(240, 237, 237),rgb(184, 182, 182));
+  border-bottom: 4rpx solid rgb(114, 112, 112);
+  
+} */
+
+.scroll-box{
+  position: absolute;
+  width: 100%;
+  height: calc( 100vh - 360rpx);
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+.operation {
+  position: absolute;
+  top: 0;
+
+  height: 120rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 120rpx;
+
+  margin:10rpx
+ }
+   
+ .operation view {
+  width: 100rpx;
+ }
+ .operation_modify{
+  right: 240rpx;
+ }
+ .operation_disable{
+  right: 125rpx;
+ }
+ .operation_delete{
+  right: 10rpx;
+ }
+   
+ .operation .delete {
+  background-color: #f56c6c;
+
+ }
+ .operation .modify {
+  background-color: #409eff;
+
+ }
+ .operation .disable {
+  background-color: #e6a23c;
+ }
+ .tasklist .liCon_box{
+   width: calc( 100vw - 20rpx );
+   overflow: hidden;
+   position: relative;
+ }
+ .operation .unDisable{
+background-color: rgb(190, 189, 189);
+ }
+ .operation .opendisable{
+   background:#67c23a ;
+ }
+ /*   */
+
+
+
+
+
+
+

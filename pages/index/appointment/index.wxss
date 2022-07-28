@@ -1,0 +1,6 @@
+page {
+	background-color: #fff;
+}
+.listCon {
+	height: 100vh;
+}

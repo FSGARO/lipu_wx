@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="broadcast flex flexdc">
+  <view>
+    <headtop title="紧急广播"></headtop>
+    <view class="siteTitle flex flexjcsb lable">
+      <view>位置</view>
+      <view class="detailsBtn" bindtap="batchControl">详情</view>
+    </view>
+    <navigator url="/pages/news/siteselect/index" class="siteopt flex flexjcsb lable">
+      <view>请选择位置</view>
+      <view class=" iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- "></view>
+    </navigator>
+    <view class="playTitle lable">
+      播放广播
+    </view>
+  </view>
+
+  <view class="startPlay grow flex flextc">
+    <view class="playwrap prelative ibk tc flexcenter">
+      <view class="playBtn ibk flexcenter cfff " bindtouchstart="addScale" bindlongtap="addTap" bindtouchend="moveScale" hover-stay-time="25" hover-start-time="25" hover-class="playBtnActive">启动
+      </view>
+    </view>
+
+  </view>
+
+  <view class="controlModel" wx:if="{{controlModel}}">
+    <view class="model" bindtap="batchControl"></view>
+    <view class="batchControl">
+      <view class="title">批量控制</view>
+      <view class="conWrap">
+        <view class="con flex">
+          sadsadsadsa
+        </view>
+      </view>
+      <view class="close flexcenter" bindtap="batchControl">
+        <view class="iconfont  icon-guanbi1  ibk"></view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+<view>
+	<view class="addaudio">
+
+		<view class="lable-con label-time brb flex flexac mtli ">
+			<view class="iconfont icon-shijian baseAct"></view>
+			<view class="basefs32">时间设置</view>
+		</view>
+
+		<view class="label-repeat cycle brb ">
+			<!-- <view class="rol1  basefs32  ">重复</view> -->
+			<view class="flex">
+				<radio-group class="radio-group  " name="a1" bindchange="radioValue">
+				<view class="radios" wx:for="{{repeat_mode}}">
+					<radio class="radio" checked="{{item.setWeek}}"  value="{{ item.mode }}">
+					</radio>
+					<text class="basefs32">{{item.name}}</text>
+					</view>
+				</radio-group>
+			</view>
+
+		</view>
+
+		<view class="lable-con lable-common flex flexac">
+			<view class="title rol1  basefs32 ">
+				执行时间
+			</view>
+			<picker mode="time">
+			<view class="val" bindtap="togglePicker">
+				<input type="text" placeholder="请选择时间" disabled value="{{audioVal.executetime}}"></input>
+			</view>
+			</picker>
+		</view>
+
+		<view class="lable-con lable-common flex flexac">
+			<view class="title rol1  basefs32">
+				播放时长
+			</view>
+			<view class="val">
+				<input type="number" placeholder="请输入2800内的整数秒" value="{{audioVal.playtime}}"></input>
+			</view>
+		</view>
+
+		<view class="lable-con lable-common flex flexac selectweek">
+			<view class="title rol1   basefs32">
+				执行周期
+			</view>
+			<view class="picker">
+				<picker class="pickerBox" mode='date' bindchange="pickerValue" value="">
+					<view class="val flex flexac" bindtap="toggleWeek">
+						<input wx:if="{{weekVal==''}}" type="text" disabled placeholder="请选择" value="{{weekVal}}"></input>
+						<view wx:if="{{weekVal!==''}}">{{weekVal}}</view>
+					</view>
+				</picker>
+			</view>
+		</view>
+
+	</view>
+
+	<!-- <pickercol wx:if="{{pickercol}}" class="pickercol-zujian" bind:onPickerView="onPickerView"> </pickercol> -->
+	<week wx:if="{{isweek}}" bind:onWeek="onWeek" weekArr="{{weekArr}}"></week>
+
+	<view class="pageAddbtn flexcenter baseAct f36" bindtap="onAddtask">添加</view>
+</view>

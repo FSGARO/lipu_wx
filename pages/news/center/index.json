@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+     "headtop": "/components/headtop/index"
+  }
+}

@@ -1,0 +1,144 @@
+/* pages/index/addWulian/index.wxss */.taskmanage {
+  height: 100vh;
+}
+
+.seach-add {
+  padding: 0rpx 30rpx 20rpx;
+  background-color: var(--bglabel);
+}
+
+/* .search, .close {
+  width: 40rpx;
+} */
+
+/* .search{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25rpx;
+  margin: auto;
+} */
+
+/* .close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30rpx;
+  margin: auto;
+} */
+
+.searchplaceholder {
+  color: var(--cfff);
+  padding-left: 50rpx;
+}
+
+.searchSolt .seach, .add {
+  border-radius: 40rpx;
+}
+
+.searchSolt .seach, .add, .searchSolt .seach input {
+  height: 62rpx;
+}
+
+.searchSolt .seach {
+  /* width: 93%; */
+  padding-left: 80rpx;
+  background-color: #7fc8fd;
+  box-sizing: border-box;
+}
+
+.add {
+  height: 62rpx;
+  line-height: 62rpx;
+  width: 180rpx;
+  background-color: var(--addbtnbg);
+  color: var(--cfff);
+}
+
+.con {
+  margin-top: 30rpx;
+}
+
+.nulldata image {
+  width: 120rpx;
+}
+
+.nulldata {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 230rpx;
+  transform: translateY(-100rpx);
+}
+
+.nulldata .tip {
+  margin-top: 50rpx;
+}
+
+.selecttask {
+  height: 115rpx;
+  line-height: 115rpx;
+  background-color: var(--cfff);
+}
+
+.downArrow {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(90deg);
+}
+
+.tasklist .userimg {
+  width: 130rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tasklist .userimg image {
+  width: 100%;
+}
+
+.qipao {
+  width: 60rpx;
+}
+
+.qipaoWrap {
+  width: 130rpx;
+}
+
+.tasklist .liCon {
+  padding: 16rpx 0 25rpx 20rpx;
+}
+
+.liCon .line {
+  margin: 0 23rpx 0 15rpx;
+}
+
+.tasklist .li {
+  background-color: var(--cfff);
+  margin-top: 30rpx;
+  padding: 24rpx 30rpx;
+}
+
+.morewrap {
+  width: 56rpx;
+  height: 38rpx;
+  background-color: var(--morebg);
+  border-radius: 6rpx;
+}
+.treeBox{
+  margin-top:-600rpx ;
+}
+.pickerView{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--cfff);
+  z-index: 620;
+}

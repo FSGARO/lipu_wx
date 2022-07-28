@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<headtop title="修改密码"></headtop>
+
+<form bindsubmit='formSubmit'>
+<view class="login">
+    <view class="login-from">
+      <view class="yzm flex flexdr flexjcsb">
+        <view class="yzm-num prelative tl">
+          <image mode="widthFix" class="verify-icon" src="../../../svg/verify.svg"></image> 
+          <input name='oldpwd' password='true' placeholder-class="inputClass" placeholder="请输入当前密码" />
+        </view>
+      </view>
+      <view class="yzm flex flexdr flexjcsb">
+        <view class="yzm-num prelative">
+          <image mode="widthFix" class="verify-icon" src="../../../svg/verify.svg"></image> 
+          <input password='true' name='newpwd' placeholder-class="inputClass" placeholder="请输入新密码" />
+        </view>
+      </view>
+      <view class="yzm flex flexdr flexjcsb">
+        <view class="yzm-num prelative">
+          <image mode="widthFix" class="verify-icon" src="../../../svg/verify.svg"></image> 
+          <input password='true' name='newpwd2' placeholder-class="inputClass" placeholder="请确认密码" />
+        </view>
+      </view>
+    </view>
+
+    <button type='primary' form-type='submit' class="login-btn fab">
+        修改密码
+    </button>
+</view>
+</form>

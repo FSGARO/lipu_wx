@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="taskmanage wd100 flex flexdc  scroll-lock}}">
+	<view hidden="{{ allScreen}}">
+		<headtop class="fixedTop" title="播放列表"></headtop>
+	</view>
+	<scroll-view class="main grow  all  {{allScreen?'top0':'top200'}}" style="padding-bottom:130rpx;"   style="top:-{{index}}vh  "  scroll-y="{{!allScreen}}"   bindscroll="bindscroll" scroll-top="{{scrollTop}}" bindscrolltolower="bindDownLoad">
+		<!-- 视屏播放列表 -->
+		<!-- style="top:-{{index}}vh"  -->
+		<view class="conwrap {{isFullScreen?'fullonwrap':''}}  {{allScreen?'allScreen':''}}" wx:for="{{tasklist }}" wx:key="id" data-index="{{index}}">
+			<!-- 视屏名称 -->
+			<!-- bindtap="setFullscreen" -->
+			<view class="live_name">{{ item.name }}</view>
+			<view class="livePlayer ">
+				<view class="live_forward " wx:if="{{ !item.forward}} {{ allScreen?'transform':''}}" wx:if="{{!item.forward}}">此流未公开</view>
+				<view class=" {{allScreen?'full-img-box':'img-box ' }}" >
+					<image hidden="{{allScreen || item.isBofang}}" src="{{imgUrl}}"  mode='aspectFill' wx:if="{{item.forward}}"></image>
+				<view class="iconfont icon-bofang4  bofang-box {{ allScreen?'transform':''}}" bindtap="bofang"  data-stream="{{item.stream}}" data-index="{{index}}"  hidden="{{ item.isBofang || !item.forward }}"></view>
+				</view>
+				<live-player catchtouchmove wx:if="{{!item.isFullScreen}}" class="video nofullScreen" id="liveplayer" src="{{item.rtmp_url}}" mode="RTC" orientation="vertical" object-fit="contain" autoplay bindstatechange="statechange" binderror="error" muted="true" controls="{{true}}" />
+
+				<live-player catchtouchmove wx:if="{{item.isFullScreen}}" class="video fullScreen" id="liveplayer"  mode="RTC" src="{{item.rtmp_url}}" orientation="horizontal" object-fit="contain" autoplay bindstatechange="statechange" binderror="error" muted="{{ item.isMuted}}" />
+				<view class="clearfix  {{item.isFullScreen?'FullBofang':'ctral_bofang'}} ">
+					<!-- <view class="iconfont icon-bofang1 left {{ allScreen?'transform':''}}"></view> -->
+					<view class="iconfont icon-zantingtingzhi left {{ allScreen?'transform':''}}"></view>
+					<view class="iconfont icon-yinliang1 left {{ allScreen?'transform':''}}"></view>
+					<!-- <view class="iconfont icon-yinliang2 left {{ allScreen?'transform':''}}"></view> -->
+					<view class="iconfont icon-quanping {{item.isFullScreen?'bottom':'right'}}" data-index="{{index}}" data-isFullScree="{{item.isFullScreen}}" bindtap="setFullscreen"></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>

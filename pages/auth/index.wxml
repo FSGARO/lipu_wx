@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view>
+  <headtop title="添加学校"></headtop>
+  <view class="login plr80 auth tc">
+    <view>扫描二维码，请添加学校</view>
+    <view class="login-btn bradius30  cfff flexcenter" bindtap="clickScan">
+      扫一扫
+    </view>
+  </view> 
+</view>

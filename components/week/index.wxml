@@ -1,0 +1,14 @@
+<view class="wrap">
+  <view class="model" bindtap="onWeek"></view>
+  <view class="weekcon">
+    <view class="li" wx:for="{{weekArr}}"  wx:for-index="index"   wx:key="name" >
+      <radio class="radio" checked="{{item.check}}" catchtap="childrenRadio" data-index="{{index}}">
+        <text>{{item.text}}</text>
+      </radio>
+    </view>
+    <view class="define flexcenter basefs" bindtap="onWeek" data-type="sure">
+        确认
+    </view>
+    
+  </view>   
+</view>

@@ -1,0 +1,47 @@
+ 
+#seachId{
+  background:linear-gradient(#8daadb,#609afd);
+}
+.seach input {
+  width: 96%;
+  text-indent: -50rpx;
+}
+
+.searchplaceholder {
+  color: var(--cfff);
+  padding-left: 50rpx;
+  font-size: 28rpx;
+}
+.seach input{
+  color: var(--cfff);
+  font-size: 28rpx;
+}
+
+.searchIcon {
+  font-size: 42rpx;
+  height: 42rpx;
+}
+.closeIcon{
+  font-size: 34rpx;
+  height: 36rpx;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25rpx;
+  margin: auto;
+  color: #fff;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20rpx;
+  margin: auto;
+  color: #fff;
+  z-index: 620;
+}
+ 

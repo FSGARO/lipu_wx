@@ -1,0 +1,111 @@
+ 
+.liveBtn{
+  
+}
+
+.icon{
+  width: 60rpx;
+}
+
+.devicebox{
+  padding: 30rpx 0;
+}
+
+
+.devicebox .icon{
+  
+}
+
+.liveBtn{
+  padding: 20rpx 40rpx;
+}
+.liveInfo image{
+  width: 40rpx;
+}
+.offInfo,.liveInfo{
+  width: 170rpx;
+  height: 60rpx;
+  border-radius: 25rpx;
+}
+
+.offInfo{
+  background-color: #74c4fc;
+}
+.liveInfo{
+  background-color: #179cfb;
+}
+
+.title{
+  height: 76rpx;
+  line-height: 76rpx;
+}
+.title-null{
+   height: 56rpx;
+}
+ 
+.devicebox-li .instrument{
+  margin-left: 0;
+}
+.instrument image{
+  width: 90rpx;
+  vertical-align: middle;
+}
+
+.offSet{
+  /* padding: 0 40rpx; */
+}
+
+.offSet label{
+  width: 50%;
+  padding: 10rpx 0;
+}
+
+.con .li{
+  background-color: var(--cfff);
+  padding: 30rpx 0 30rpx 30rpx; 
+ 
+}
+.radio-group{
+  margin-left: 30rpx;
+}
+ .makeicon,.klangicon{
+   width: 63rpx;
+   vertical-align: middle;
+ }
+ 
+.slider{
+  width: 400rpx;
+}
+
+.volume{
+  background-color: var(--cfff);
+  padding: 20rpx 30rpx;
+
+}
+.volume .lable{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.slider{
+  width: 70%;
+  margin: 0;
+}
+ 
+/* .devicebox .iconfont,.devicebox-li .iconfont{
+  font-size: 50rpx;
+}
+ */
+.signal{
+  background-color: #fff;
+  color: #777;
+  border: 4rpx solid #777;
+}
+.signal text{
+   font-size: 24rpx;
+}
+
+
+
+
+

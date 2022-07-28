@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="innerhead tc prelative flex flexcenter">
+  <view class="ibk upBtn" wx:if="{{topdisplay}}" bindtap="upPage" hover-class="activeBtn">
+    <view class=" iconfont icon-jiantou3 "></view>
+  </view>
+  {{title}}
+</view>

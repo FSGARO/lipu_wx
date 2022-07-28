@@ -1,0 +1,216 @@
+<view class="addMedia">
+	<headtop title="物联任务"></headtop>
+	<view class="addaudio">
+		<view class="priority flex flexjcsb">
+			<view class="name">
+				<view>名称</view>
+		<!-- <view>{{ comeName}}</view> -->
+				<input type="text" placeholder="请输入名称" value="{{TaskName}}" bindinput="inputValue" class="inputName"></input>
+			</view>
+			<!-- <view class="selectPriority flex flexac">
+				<picker class="ibk wd100" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+					<view class="picker">
+						{{ array[index] }}
+					</view>
+				</picker>
+			</view> -->
+		</view>
+
+		<!-- 位置 -->
+		<view class="resource-lable flex flexjcsb">
+			<view class="flex">
+				<view class="icon ibk flex flexac">
+					<view class="iconfont icon-weizhiquanxian baseAct"></view>
+				</view>
+				<view class="desc ibk flex flexdc  flexacsb flextc">
+					<view>
+						<view class="basefs32">位置</view>
+						<view class="basefs30 c999">{{ schollCount.length  }}个源</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex flexdc flexac">
+				<view class="descBtn"  bindtap="siteDetail">详情</view>
+				<!-- 位置详情 -->
+				<view class="siteDetail_box"  wx:if="{{isSiteDetail}}">
+				<view class="icon-10 iconfont  site_icon"  bindtap="siteDetail"></view>
+				<view class="site_text">已选位置</view>
+					<view  class="site_scholl clearfix">
+						<view wx:for="{{ schollCount}}"  wx:key="index" class="site_scholl_item  left">
+							<view class="site_scholl_text">{{ item.name }}</view>
+						</view>
+					</view>
+
+				</view>
+				<view class="iconfont icon-changyongtubiao-mianxing- baseAct"   bindtap="goSite"></view>
+				<!-- 选择地址 -->
+				<view class="Choose_box   "  >
+				
+					<view class="chooseMedio " wx:if="{{ SiteChoose }}">
+				
+						<view class="SiteTop">位置选择</view>
+						
+						<view class=" SiteBox">
+							<scroll-view class="scroll_site" scroll-y >
+						<trees treesArr="{{treesArr}}" bind:treeTapp="treeTapp"  bind:treeTapss="treeTapss"></trees>
+					</scroll-view>
+						<view bindtap="goSite" class="define"> 确定 </view>
+					</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+
+
+		
+
+		<view class="lable-con label-time brb flex flexac mtli pl60 margin_top20">
+				同步控制 
+			</view>
+			<view class="sync_Con">
+				<view class="sync_tabGroup clearfix ">
+					<scroll-view class="sync_tabCon_scroll" >
+					<view wx:for="{{syncControl1}}" wx:key="id">
+						<view class=" left tab {{ syncval==index?'syncAct':'' }}  {{item.checkbox ?'syncAct':'' }} basefs30"
+							bindtap="changeSync" data-index="{{index}}" data-items="{{item}}">{{item.comment}}</view>
+					</view>
+				</scroll-view>
+				</view>
+
+				<view class="sync_tabCon "   wx:if="{{sync_tabCon}}" >
+			
+					<view class="flex flexjcsb pr40">
+						<view class="sync_tabCon_box">
+							<view class="checkbox clearfix sync_tabCon_lab ">
+								<checkbox-group bindchange="checkboxChangesync"  class="left sync_tabCon_check" >
+									<checkbox checked="{{ ctroItems.checkbox }}" value="{{ctroItems.id}}" />选择
+								</checkbox-group>
+
+
+											<!-- 指令附加条件 -->
+					<view  class="contral_delay  clearfix  right">
+						<input type="number" bindinput="delay_time" placeholder="延时时间" class="contral_delay_inp left"
+										disabled="{{ !ctroItems.checkbox }}" value="{{ctroItems.attr}}" />
+										<view class="contral_delay_text left">秒</view>
+						
+					</view>
+								
+							</view>
+						</view>
+					</view>
+
+
+					<view class="interface">
+						<radio-group class="radio-group flex flexwrap flexjcfs" bindchange="radioChange">
+							<label class="radio" wx:for="{{ctroItems.options}}" wx:key="index">
+								<radio disabled="{{!ctroItems.checkbox }}" checked="{{item.checkbox}}" value="{{item.attr}}" />
+								{{item.comment}}
+							</label>
+						</radio-group>
+					</view>
+		
+				</view>
+			</view>
+
+
+
+
+
+
+
+
+
+
+
+
+		<view class="lable-con label-time brb flex flexac mtli  margin_top20 ">
+			<view class="iconfont icon-shijian baseAct"></view>
+			<view class="basefs32">时间设置</view>
+		</view>
+
+		<view class="label-repeat cycle brb sync_Con">
+			<!-- <view class="rol1  basefs32  ">重复</view> --> 
+			<view class="flex ">
+				<radio-group class="radio-groups  " name="a1" bindchange="radioValue">
+					<view class="radios" wx:for="{{repeat_mode}}" wx:key="index">
+						<radio class="radio radio40" value="{{ item.mode }}" checked="{{item.isChecked}}">
+						<text class="basefs32">{{item.name}}</text>
+
+						</radio>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+
+		<view class="timeBox  flex flexac selectWeek"   hidden="{{timeMode == '-1' }}">
+			<view class="title rol1  basefs32 ">
+				执行时间
+			</view>
+			<picker mode="multiSelector" range="{{time_range}}"  bindchange="audioVal"  disabled="{{timeMode == ''}}">
+				<view class="val clearfix">
+					<view wx:if="{{playtime==''}}" class="{{timeMode == ''?'':'picker_time'}}"></view>
+					<!-- <view class="weekVal left" wx:for="{{playtime}}">{{ item }} </view> -->
+					<view class="left">
+						<view class="weekVal left" wx:for="{{playtime}}" wx:key="index">
+							<view class="time_item"> {{ item }} </view>
+							<view class="iconfont icon-chuyidong1" catchtap="del_item" data-type="playtime" data-index="{{index}}">
+							</view>
+						</view>
+					</view>
+				</view>
+			</picker>
+			<!-- <view class="addBtn">
+				<view class=" iconfont icon-changyongtubiao-mianxing- baseAct "></view>
+			</view> -->
+		</view>
+
+		<view class="timeBox   flex flexac selectWeek"  hidden="{{timeMode == '6' || timeMode == '-1' }}">
+			<view class="title rol1   basefs32">
+				执行周期
+			</view>
+
+			<view class="picker" wx:if="{{ timeMode == '0' || timeMode == '2'}}">
+				<picker class="pickerBox" mode="multiSelector" bindchange="pickerValue"  disabled="{{timeMode == ''}}"  range="{{month_day_range}}"    >
+					<view class="val  clearfix">
+						<view wx:if="{{dayVal==''}}"   disabled="{{timeMode == ''}}"  class="{{timeMode == ''?'':'picker_time'}}">
+					</view>
+						<!-- <view class="weekVal left" wx:for="{{dayVal}}">{{ item }} </view> -->
+						<view class="left">
+							<view class="weekVal left" wx:for="{{dayVal}}" wx:key="index">
+								<view class="time_item"> {{ item }} </view>
+								<view class="iconfont icon-chuyidong1" catchtap="del_item" data-type="dayVal" data-index="{{index}}">
+								</view>
+							</view>
+						</view>
+					</view>
+				</picker>
+			</view>
+
+
+			<view class="   flex flexac " bindtap="toggleWeek" wx:if="{{ timeMode == '3'}}">
+				<view class="val  clearfix">
+					<view wx:if="{{weekVal==''}}"  class="{{timeMode == ''?'':'picker_time'}}" >
+					</view>
+					<view class="left">
+						<view class="weekVal left" wx:for="{{weekVal}}" wx:key="index">
+							<view class="time_item"> {{ item }} </view>
+							<view class="iconfont icon-chuyidong1" catchtap="del_item" data-type="weekVal" data-index="{{index}}">
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<!-- <view class="addBtn" hidden="{{timeMode == '3'}}"> 
+				<view class="  iconfont icon-changyongtubiao-mianxing- baseAct"></view>
+			</view> -->
+		</view>
+	</view>
+
+
+	<week wx:if="{{isweek}}" bind:onWeek="onWeek" weekArr="{{weekArr}}"></week>
+
+	<view class="pageAddbtn flexcenter baseAct " bindtap="onAddtask">{{ mainName}}</view>
+</view>

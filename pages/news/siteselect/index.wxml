@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="siteselect flex flexdc">
+  <view>
+    <headtop title="位置选择"></headtop>
+  </view>
+  <view class="con">
+    <view class="label-li brb" wx:for="{{site}}" wx:for-index="fatherIndex" wx:for-item="fatherItem" wx:key="name" value="{{itemName.name}}">
+      <view class="siteli allli flex  prelative flexac brb flexjcsb" bindtap="showSon" data-index="{{fatherIndex}}">
+        <view>
+          <radio class="radio" checked="{{fatherItem.checkSelect}}" catchtap="fatherRadio" data-index="{{fatherIndex}}">
+          </radio>
+          <text>{{fatherItem.name}}</text>
+        </view>
+        <view class="audioIcon iconfont icon-jiantou3 {{fatherItem.checkShow?'active':''}}"></view>
+      </view>
+
+      <view class="siteli sonli flex prelative flex flexac brb" wx:if="{{fatherItem.checkShow}}" wx:for="{{fatherItem.children}}" data-show="{{fatherItem.checkShow}}" wx:for-index="childrenIndex" data-index="{{childrenIndex}}" data-dasdsa="{{item.name}}" wx:key="name"
+        value="{{item.name}}">
+        <radio class="radio" checked="  {{item.checkSelect}}" catchtap="childrenRadio" data-liidnex="{{fatherIndex}}" data-aindex="{{childrenIndex}}">
+          <text>{{item.name}}</text>
+        </radio>
+      </view>
+    </view>
+  </view>
+  <view class="flexcenter allcheck flexdc" bindtap="changeAllcheck">
+    <view wx:if="{{allCheck}}" class="audioIcon iconfont icon-xianshi_xuanzetianchong baseAct  "></view>
+    <view wx:if="{{!allCheck}}" class="audioIcon iconfont icon-quanxuan "></view>
+    <view class="datefs">{{allCheck?'取消全选':'全选'}}</view>
+  </view>
+</view>

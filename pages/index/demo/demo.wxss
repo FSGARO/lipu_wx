@@ -1,0 +1,221 @@
+.topBox {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  color: #fff;
+  font-weight: 400;
+  font-size: 34rpx;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+
+}
+
+.page {
+  background-color: #fff;
+}
+
+.addFnc,
+.edit {
+
+  background: linear-gradient(to bottom, #4eb5e5 0%, #389ed5 100%);
+  border-radius: 5px;
+  border-bottom: 5px solid #2b8bc6;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+  text-align: center;
+  padding: 10rpx 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 15rpx;
+}
+
+.edit {
+  background-color: #e6a23c;
+  background: linear-gradient(to bottom, #dfa054 0%, #f7d474 100%);
+  border-bottom: 5px solid #ce9c5c;
+}
+
+.addFnc:active,
+.edit:active {
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, .2);
+  top: 1px;
+  font-size: 36rpx;
+}
+
+.nav-box {
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.iot-box-text {
+  border-bottom: 1px solid #ccc;
+}
+
+.text-box {
+  color: #7176b7 !important;
+  font-weight: 400;
+  font-size: 40rpx;
+  padding: 20rpx 10rpx 0rpx 10rpx;
+
+}
+
+.content-box {
+  /* height: 80rpx; */
+  padding-top: 30rpx;
+  /* border-bottom: 1rpx solid rgba(233, 229, 229, 0.959); */
+}
+
+.content-text {
+  font-size: 34rpx;
+  line-height: 80rpx;
+  text-align: center;
+  padding-left: 20rpx;
+}
+
+.swt {
+  line-height: 80rpx;
+  transform: scale(0.9);
+}
+
+.iot-box {
+  box-shadow: 0px 7px 7px -7px #5E5E5E;
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding-bottom: 10rpx;
+}
+
+.lable {
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+  margin: 20rpx 0;
+  padding-bottom: 20rpx;
+
+}
+
+.slider {
+  width: 400rpx;
+
+}
+
+.ibk-box {
+  width: 100%;
+  height: 80rpx;
+  /* border:1rpx solid red; */
+}
+
+.slider-box {
+  width: 100%;
+  display: block;
+  height: 60rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav-box .ibk {
+  line-height: 80rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  font-size: 34rpx;
+}
+
+.nav-box .iconfont {
+  line-height: 80rpx;
+  margin-left: 0rpx;
+  color: #098dca;
+}
+
+.weui-cell {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.weui-check__label {
+  width: 100%;
+}
+
+.item {
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.weui-cell__hd {
+  line-height: 70rpx;
+  padding-left: 40rpx;
+}
+
+.weui-cell__bd {
+  line-height: 70rpx;
+  padding: 0 10rpx;
+}
+
+.nav-content-amb {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+
+}
+
+.amb-box {
+  width: 27%;
+  height: 140rpx;
+  background-color: #5f9ea0;
+  margin: 40rpx 22rpx 10rpx 22rpx;
+  position: relative;
+
+}
+
+.amb-item {
+  margin-top: 20rpx;
+}
+
+.item-num,
+.item-name {
+  line-height: 40rpx;
+}
+
+.icon-xianxingtubiao_huabanfuben,
+.icon-yinxiang {
+  margin-right: 0rpx;
+}
+
+.detal {
+  position: absolute;
+  right: -40rpx;
+  top: -40rpx;
+}
+
+.del .iconfont {
+  color: red;
+  font-size: 50rpx;
+}
+
+.del {
+  width: 50rpx;
+  display: inline-block;
+  padding: 0 10rpx;
+}
+.iot_btn{
+  width: calc(100vw - 40rpx);
+  display: flex;
+ justify-content:space-around;
+ margin-bottom: 30rpx;
+}
+.iot_radio{
+  /* background: blue; */
+  padding: 10rpx;
+}
+.iot_btn_items{
+  /* background: rgb(187, 95, 95); */
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.item-box{
+  text-align: center;
+  height: 70rpx;
+}

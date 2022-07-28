@@ -1,0 +1,62 @@
+@import './utils/font.wxss';
+@import './utils/common.wxss';
+@import './utils/flex.wxss';
+
+/**app.wxss**/
+
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} */
+
+page {
+    background-color: #f2f2f2;
+    color: #666;
+  --lablecolor: #808080;
+  /* --bglabel: #7c8ffc; */
+  --bglabel:#5aa2d6;
+  
+  --playbtn: #a0e0c4;
+  --menubg: #c2e4fd;
+  --addbtnbg: #179cfb;
+  --theadbg: #505e70;
+  --offbox: #f35958;
+  --computerbox: #2cc88e;
+  --lightingbox: #ff9c08;
+  --seatbox: #ccc;
+  --projector: #844edf;
+  --pagecolor: #f7f7f7;
+  --brcolor:#d7d7d7;
+
+  --menubg:#9cd4fd;
+  --bradd: green;
+  --total: #f35958;
+  --computer: #2cc88e;
+  --lighting: #ff9c08;
+  --morebg: #cacaca;
+  /* 添加任务 同步控制 制冷 */
+  --cold: #5269fc;
+  --heat: #ffa218;
+  --cfff: #fff;
+  --c999:#666;
+  --pulish:#22ac38;
+  --baseAct:#1eaa39;
+  
+  height: 100%;
+}
+
+.total {
+  background-color: var(--total);
+}
+
+.computer {
+  background-color: var(--computer);
+}
+
+.lighting {
+  background-color: var(--lighting);
+}

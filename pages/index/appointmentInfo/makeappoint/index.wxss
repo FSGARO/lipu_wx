@@ -1,0 +1,104 @@
+page {
+	background-color: #fff;
+}
+
+.make {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.thead .btn {
+	width: 15%;
+	font-size: 31rpx;
+}
+
+.btn1 {
+	padding: 0;
+	height: 100%;
+	background-color: #efeaea;
+}
+
+.sj {
+	color: #74736f;
+}
+
+.day {
+	font-size: 25rpx;
+}
+
+.xuanzhe {
+	line-height: 80rpx;
+	font-size: 20rpx;
+	font-weight: 900;
+	background-color: #efeaea;
+}
+
+.active {
+	background-color: #57ae5d;
+	color: #fff;
+}
+
+.zuobian {
+	background-color: #efeaea;
+}
+
+.bj {
+	width: 100%;
+	height: 60rpx;
+}
+
+.picker {
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 30rpx;
+}
+
+.con .tmbox {
+	width: 100%;
+	font-size: 21rpx;
+	align-content: center;
+	font-weight: 600;
+	padding: 0;
+	border-radius: 10rpx;
+	text-align: center;
+	line-height: 40rpx;
+	background-color: #efeaea;
+	border: solid 1rpx #a3a2a0;
+	box-sizing: border-box;
+	height: 80rpx;
+	margin-top: 20rpx;
+}
+
+.timeList {
+	font-size: 31rpx;
+	margin-top: 20rpx;
+	line-height: 40rpx;
+}
+
+.wd15 {
+	width: 15%;
+}
+
+.timeleft {
+	width: 15%;
+}
+.main {
+	padding: 20rpx;
+}
+.guoqi {
+	pointer-events: none;
+	width: 100%;
+	line-height: 70rpx;
+	background-color: #f7f7f7;
+	color: #f74200;
+}
+.yue {
+	pointer-events: none;
+	color: #57ae5d;
+	border: solid 1rpx red;
+	background-color: #f7f7f7;
+}
+.vacant {
+	color: #2ecc71;
+}

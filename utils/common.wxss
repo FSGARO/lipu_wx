@@ -1,0 +1,676 @@
+div, input, image {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+page {
+  background-color: #f8f8f8 !important;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: both;
+  clear: both;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clearfix {
+  zoom: 1;  
+}
+.transform{
+  transform: rotate(90deg);
+}
+
+/*----------------字体----------------*/
+
+.f0 {
+  font-size: 0;
+}
+
+.f17 {
+  font-size: 17rpx;
+}
+
+.f19 {
+  font-size: 19rpx;
+}
+
+.f20 {
+  font-size: 20rpx;
+}
+
+.f21 {
+  font-size: 21rpx;
+}
+
+.f22 {
+  font-size: 22rpx;
+}
+
+.f23 {
+  font-size: 23rpx;
+}
+
+.f24 {
+  font-size: 24rpx;
+}
+
+.f25 {
+  font-size: 25rpx;
+}
+
+.f26 {
+  font-size: 26rpx;
+}
+
+.f27 {
+  font-size: 27rpx;
+}
+
+.f28 {
+  font-size: 28rpx;
+}
+
+.f29 {
+  font-size: 29rpx;
+}
+
+.f30 {
+  font-size: 30rpx;
+}
+
+.f31 {
+  font-size: 31rpx;
+}
+
+.f32 {
+  font-size: 32rpx;
+}
+
+.f34 {
+  font-size: 32rpx;
+}
+
+.f36 {
+  font-size: 36rpx;
+}
+
+.f43 {
+  font-size: 43rpx;
+}
+
+.f48 {
+  font-size: 48rpx;
+}
+
+.basefs {
+  font-size: 34rpx;
+}
+
+.news .basefs {
+  font-size: 32rpx;
+}
+
+.basefs32 {
+  font-size: 32rpx;
+}
+
+.basefs30 {
+  font-size: 30rpx;
+}
+
+.basefs2 {
+  font-size: 28rpx;
+}
+
+.datefs {
+  font-size: 26rpx;
+}
+
+.broadcast .text {
+  font-size: 36rpx;
+}
+
+.radio-group radio {
+  transform: scale(0.8);
+}
+
+.addaudio .radio-group radio {
+  transform: scale(0.9);
+}
+
+.mauto {
+  margin: auto;
+}
+
+.taskmanage .mtli {
+  margin-top: 30rpx;
+}
+
+.ml5 {
+  margin-left: 5rpx;
+}
+
+.ml10 {
+  margin-left: 10rpx;
+}
+
+.ml20 {
+  margin-left: 20rpx;
+}
+
+.mt60 {
+  margin-top: 60rpx !important;
+}
+
+.mlr20 {
+  margin: 0 20rpx;
+}
+
+.ptrbl20 {
+  padding: 20rpx;
+}
+
+.plr80 {
+  padding: 0 80rpx;
+}
+
+.plr40 {
+  padding: 0 30rpx;
+}
+
+/* 边框 */
+
+.bradius {
+  border-radius: 15rpx;
+}
+
+.bradius30 {
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+
+.brb {
+  border-bottom-width: 2rpx;
+  border-bottom-style: solid;
+  border-bottom-color: var(--brcolor);
+}
+
+.middleLine {
+  width: 1rpx;
+  height: 100%;
+  background-color: var(--brcolor);
+  transform: scalex(0.3);
+}
+
+.bradd {
+  border-bottom-color: #04b102;
+  border-bottom-width: 4rpx;
+  border-bottom-style: solid;
+}
+
+.brboxl, .brboxt {
+  border-right-color: #04b102;
+  border-right-width: 4rpx;
+}
+
+.brboxl {
+  border-right: 4rpx solid #04b102;
+}
+
+.brboxt {
+  border-top: 4rpx solid #04b102;
+}
+
+/* 对齐 */
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.ibk {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.arrowIcon {
+  width: 25rpx;
+  height: 25rpx;
+  border-left: 2rpx solid #666;
+  border-bottom: 2rpx solid #666;
+  margin-top: 12rpx;
+}
+
+.arrowUp {
+  transform: rotate(135deg);
+}
+
+.arrowDown {
+  transform: rotate(-45deg);
+}
+
+.activeBtn {
+  opacity: 0.6;
+}
+.wd100 {
+  width: 100%;
+}
+.he100 {
+  height: 100%;
+}
+.pageAddbtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130rpx;
+  background-color: var(--cfff);
+  z-index: 536;
+  font-size: 50rpx;
+}
+
+/* 字体颜色 */
+
+.cfff {
+  color: #fff;
+}
+
+.lablecolor {
+  color: var(--lablecolor);
+}
+
+.c999 {
+  color: #999;
+}
+
+.datec {
+  color: #808080;
+}
+
+.baseAct {
+  color: #04b102;
+}
+
+.topBox {
+  background-color: var(--bglabel);
+}
+
+.pattern .active:nth-child(1), .pattern .active:nth-child(3) {
+  color: var(--cold);
+}
+
+.pattern .active:nth-child(2) {
+  color: var(--heat);
+}
+
+
+
+/* 首页的公共样式 */
+
+.topHead {
+  /* padding: 50rpx 30rpx; */
+  color: var(--bglabel);
+}
+
+/* .pulldown{
+  width: 20rpx;
+  height: 20rpx;
+  border-left: 4rpx solid #999;
+  border-bottom: 4rpx solid #999;
+  transform: rotate(-45deg);
+  vertical-align: 7rpx;
+  margin-left: 16rpx;
+} */
+
+.fw {
+  font-weight: bold;
+}
+
+.lighting {
+  background-color: var(--lightingbox) !important;
+}
+
+.switch {
+  background-color: var(--offbox) !important;
+}
+
+.seat {
+  background-color: var(--offbox) !important;
+}
+
+.computer {
+  background-color: var(--computerbox) !important;
+}
+
+.projector {
+  background-color: var(--projector) !important;
+}
+
+.setBox {
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+  background-color: var(--seatbox);
+  border-radius: 6rpx;
+  color: #fff;
+}
+
+.setBox .iconfont {
+  font-size: 50rpx;
+}
+
+.setBox text {
+  font-size: 26rpx;
+}
+
+.resource-lable {
+  padding: 30rpx;
+  margin-top: 20rpx;
+  background-color: var(--cfff);
+}
+
+.resource-lable .addbtn image {
+  width: 60rpx;
+}
+
+.resource-lable .icon image {
+  width: 130rpx;
+}
+.fab{
+  margin-top: 80rpx;
+  width: 94%;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 15rpx;
+  text-align: center;
+}
+
+/* icon图标样式  */
+
+.timeicon {
+  width: 70rpx;
+}
+
+.lable-con {
+  height: 88rpx;
+  background-color: var(--cfff);
+}
+
+.lable-con .rol1 {
+  width: 200rpx;
+}
+
+.model {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+  opacity: 0.7;
+  z-index: 599;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.weekcon {
+  width: 80%;
+  height: 580rpx;
+  position: fixed;
+  z-index: 620;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: var(--cfff);
+  border-radius: 10rpx;
+}
+.fixedTop{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 88888;
+}
+
+.fixedMain{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  box-sizing: border-box;
+
+}
+/* 弹窗样式 */
+.batchControl {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 500rpx;
+  background-color: #f2f2f2;
+  border-radius: 20rpx;
+  top: 0;
+  bottom: 0;
+  padding: 20rpx 30rpx;
+  z-index: 620;
+}
+
+.batchControl .title{
+  padding:30rpx 0;
+  text-align: center;
+}
+
+.batchControl .li .icon{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #999999;
+  border-radius: 50%;
+}
+
+.batchControl .li .icon image{
+  width: 40%;
+}
+
+.batchControl .close{
+  position: absolute;
+  bottom: -80rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: auto;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: var(--bglabel);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.batchControl .conWrap{
+ background-color: var(--cfff);
+ border-radius: 15rpx;
+ padding: 30rpx 0;
+}
+
+.batchControl .conWrap .con .li{
+  border-bottom: none;
+  padding: 15rpx 0;
+}
+
+/* end */
+
+.tabli .activeA {
+  color: #be43be;
+  transform: scale(1.4);
+}
+
+.syncAct {
+  background-color: var(--computer);
+  color: var(--cfff);
+}
+
+/* label样式 */
+
+.listCon .li {
+  padding: 40rpx 30rpx;
+}
+
+.listCon .icon {
+  width: 90rpx;
+  height: 90rpx;
+  background-color: var(--bglabel);
+  border-radius: 40%;
+}
+
+.listCon .icon image {
+  width: 40%;
+}
+
+.listCon .lableText {
+  padding-left: 50rpx;
+}
+
+.listCon .arrowRight {
+  width: 50rpx;
+}
+
+.labelText {
+  padding: 0 40rpx;
+  height: 103rpx;
+  background-color: #fff;
+  border-width: 1rpx;
+  border-style: solid;
+  border-color: var(--brcolor);
+  border-top: none;
+}
+
+.bgfff {
+  background-color: #fff;
+}
+
+/* 字体图标大小 */
+
+.icon-youyinpin, .icon-bofang, .icon-kongzhi {
+  font-size: 70rpx;
+  font-weight: bold;
+}
+
+.icon-gengduo, .icon-guanbi1, .icon-luyin, .news .icon-xinxi,
+.news .icon-xiaoxi1, .news .icon-fuwu {
+  color: #fff;
+}
+
+.icon-shijian, .icon-bofang, .icon-weizhiquanxian {
+  margin-right: 6rpx;
+}
+
+.icon-luyin {
+  font-size: 150rpx;
+}
+
+.icon-changyongtubiao-mianxing- {
+  font-size: 54rpx;
+}
+
+.icon-shijian {
+  font-size: 56rpx;
+}
+
+.news .icon-xinxi, .news .icon-xiaoxi1, .news .icon-fuwu,.icon-xiaoneiwenda {
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.icon-gengduo {
+  font-size: 34rpx;
+}
+
+.icon-guanbi1 {
+  font-size: 30rpx;
+}
+
+.icon-saoyisao {
+  font-size: 52rpx;
+}
+
+.innerhead {
+  font-size: 37rpx;
+}
+
+.resource-lable .icon-bofang, .resource-lable .icon-weizhiquanxian {
+  font-size: 60rpx;
+}
+
+.taskmanage .foot .iconfont {
+  font-size: 34rpx;
+}
+
+.taskmanage .foot .icon-shanchu {
+  font-size: 40rpx;
+}
+
+.icon-xianxingtubiao_huabanfuben, .icon-yinxiang {
+  font-size: 60rpx;
+  margin-left: 25rpx;
+  margin-right: 16rpx;
+}
+
+.appointment .icon-changyongtubiao-xianxingdaochu-zhuanqu- {
+  font-size: 40rpx;
+}
+
+.icon-xianshi_xuanzetianchong, .icon-quanxuan {
+  font-size: 56rpx;
+}
+.iconbox{
+  width: 99rpx !important;
+  height: 99rpx !important;
+  border-radius: 18rpx !important;
+}
+.pageMenuCon .li{
+  box-sizing: border-box !important;
+width: 100% !important;
+padding: 30rpx 30rpx 25rpx 40rpx !important;
+border-bottom-width: 2rpx !important;
+border-bottom-style: solid !important;
+border-bottom-color: var(--brcolor) !important;
+
+}
+
+/* 公共表格样式 */
+table{
+  border: 1rpx solid #ccc;
+  width: 100%;
+}
+.tr{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.th{
+  font-weight: 900;
+  background: #f5f7fa;
+  color: #808080;
+}
+.th,.td{
+  padding: 10rpx;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  border: 1rpx solid #ccc;
+}
